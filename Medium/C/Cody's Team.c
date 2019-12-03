@@ -20,5 +20,6 @@ int main() {
 
   }
   printf("%d", high);
+  free(x);
   return 0;
 }

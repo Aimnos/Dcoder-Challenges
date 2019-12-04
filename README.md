@@ -34,55 +34,55 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The Beta Test Initiation
 - [x] Ordinal Representation
 - [ ] Fare (2/3) (Fails on TestCase#1)
-- [x] Buy The Bundle
+- [x] Buy the Bundle
 - [x] The Armstrong Number
 - [x] Treasure Hunt
 - [x] Help Cody
 - [x] Tables
 - [x] Equable Triangles
-- [x] Tracy's love.
-- [x] Find the eldest brother!
-- [x] Reverse The Linked list
+- [x] Tracy's Love.
+- [x] Find the Eldest Brother!
+- [x] Reverse the Linked List
 - [x] First Half!!
-- [x] The coding Challenges
-- [x] The bit flipper
-- [x] I don't like Repetition
+- [x] The Coding Challenges
+- [x] The Bit Flipper
+- [x] I Don't Like Repetition
 - [x] The Floating circle
 - [x] Binary to Decimal
 - [x] Exponentia!
-- [x] The Secure function : Xr
+- [x] The Secure Function : Xr
 - [x] The Report Card!
-- [x] I'll be the next
-- [x] Capitalize me
-- [x] Square of squares
-- [x] Find me the divisor count
+- [x] I'll Be the Next
+- [x] Capitalize Me
+- [x] Square of Squares
+- [x] Find Me the Divisor Count
 - [x] The Vowel Counter
-- [x] The closest to Average
-- [x] Let's get GCD
+- [x] The Closest to Average
+- [x] Let's Get GCD
 - [x] The Predictor
-- [x] Reverse me
+- [x] Reverse Me
 - [x] The irritating Students
 - [x] Toggle Me!
-- [x] They see me Palindroming
+- [x] They See Me Palindroming
 - [x] Avik and his Girlfriend's Necklace
 - [x] The War of Problem Setters
-- [x] The sum of Array
+- [x] The Sum of Array
 - [x] The Triangle Game
 - [x] The Rock, Paper, Scissor Game
-- [x] Use loops to draw patterns(Pyramid)
-- [x] Sum of squares
-- [x] Learn Sum of numbers
-- [x] The light Switch
+- [x] Use Loops to Draw Patterns (Pyramid)
+- [x] Sum of Squares
+- [x] Learn Sum of Numbers
+- [x] The Light Switch
 - [x] Dcooooooooooder Fan
-- [x] Learning Strings and binary numbers
-- [x] Learning sorting numbers with if else
-- [x] Learning Prime numbers with Loop/Recursion
-- [x] The BlackJack with conditions
-- [x] The shortest Path Algo(Simple)
-- [x] How many weeks
+- [x] Learning Strings and Binary Numbers
+- [x] Learning Sorting Numbers with If Else
+- [x] Learning Prime Numbers with Loop/Recursion
+- [x] The BlackJack with Conditions
+- [x] The shortest Path Algo (Simple)
+- [x] How Many Weeks
 - [x] Learning Factorials with Loop/Recursion
 - [x] Learning User Input with Natural Numbers
-- [x] Printing number using loop
+- [x] Printing Number Using Loop
 - [x] Print Hello World
 
 - Medium
@@ -119,42 +119,42 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [ ] Password Validator!
 - [ ] The 2's Complement
 - [ ] Where am I!!
-- [ ] The left Rotation
-- [ ] Only you can complete me.
+- [ ] The Left Rotation
+- [ ] Only You Can Complete Me.
 - [ ] The Number Pyramid!
-- [ ] MOM!! I wanna be unique.
+- [ ] MOM!! I Wanna Be Unique.
 - [ ] Number of the Beast
-- [ ] Find that pair!
-- [ ] The Game of Brackets (simple)
-- [ ] Count trailing zeroes in n!
-- [ ] The simplest compression
-- [ ] The greater numbers
-- [ ] The one and only
+- [ ] Find that Pair!
+- [ ] The Game of Brackets (Simple)
+- [ ] Count Trailing Zeroes in N!
+- [ ] The Simplest Compression
+- [ ] The Greater Numbers
+- [ ] The One and Only
 - [ ] Profit Matters!
 - [ ] Roots Roots Roots!
 - [ ] The Social Media Experiment!
-- [ ] The longest word.
+- [ ] The Longest Word.
 - [ ] The \^\_\^ -\_- String
 - [ ] The \^\_\^ String
-- [ ] Let's make Arrays allies.
-- [ ] Guess the Fibonacci number
-- [ ] Get the median
+- [ ] Let's Make Arrays Allies.
+- [ ] Guess the Fibonacci Number
+- [ ] Get the Median
 - [ ] Play with Strings
-- [ ] The Predictor(Enhanced)
-- [ ] The pascal triangle
-- [ ] Prime numbers : My friends
-- [ ] The Last Man survived
+- [ ] The Predictor (Enhanced)
+- [ ] The Pascal Triangle
+- [ ] Prime Numbers : My Friends
+- [ ] The Last Man Survived
 - [ ] The Big Multiplication
 - [ ] The Game of Power
-- [ ] I need equality
+- [ ] I Need Equality
 - [ ] Anything You Can Do, I Can Do Better
-- [ ] Learn sequences fun way
-- [ ] String - Half of the half
-- [ ] The divisibility Test
-- [ ] The inquire
+- [ ] Learn Sequences Fun Way
+- [ ] String - Half of the Half
+- [ ] The Divisibility Test
+- [ ] The Inquire
 - [ ] Learning Powers with Loops
 - [ ] Learning String with Pig Latin
-- [ ] Learning even odds with Strings and Loops
+- [ ] Learning Even Odds with Strings and Loops
 
 - Hard
 - [ ] Depleting Ammunition
@@ -184,14 +184,14 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [ ] Equal Strings
 - [ ] Prime Subarray
 - [ ] Tournament
-- [ ] Sherlock plays The Great Game
+- [ ] Sherlock Plays the Great Game
 - [ ] The Game of Brackets
-- [ ] Find the majority element in array.
-- [ ] The alphabet pool
+- [ ] Find the Majority Element in Array.
+- [ ] The Alphabet Pool
 - [ ] The Prime Search
 - [ ] Arrays and Merging
-- [ ] Great Power comes with great responsibility
+- [ ] Great Power Comes with Great Responsibility
 - [ ] Play with Sequences and Subsequence
-- [ ] The boring Sets
+- [ ] The Boring Sets
 - [ ] Fit Me In
 - [ ] The Cool Numbers

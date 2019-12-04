@@ -1,2 +1,197 @@
 # Dcoder-Challenges
-My solutions to Dcoder challenges (mostly in C, will try to branch out as much as possible in the future)
+My solutions to Dcoder challenges (mostly in C, will try to branch out as much as possible in the future), also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
+
+## List of available solutions
+- Easy
+- [x] Leap Year
+- [x] Project Teams
+- [x] Circle of Numbers
+- [x] Happy String
+- [x] Degree Celsius
+- [x] Three's Company
+- [x] Array Sum
+- [x] Change in Case
+- [x] Finding Nemo
+- [x] Extraction of Numbers
+- [x] Pangrams
+- [x] José Learns Inglés
+- [x] Special Array
+- [x] Numbered Triangle
+- [x] Archie and his Homework
+- [x] Text Editor
+- [x] The Homework
+- [x] The Largest Gap
+- [x] What's the ASCII?
+- [x] Divide the Array
+- [x] Grade the Students
+- [x] First and the Last Digit
+- [x] Dr. Primo Visits ArrayCon
+- [x] Total Expenses
+- [x] Valid Quadrilateral
+- [x] Least Significant Bit
+- [x] Ceil and Floor
+- [x] The Running Race
+- [x] The Beta Test Initiation
+- [x] Ordinal Representation
+- [ ] Fare (2/3) (Fails on TestCase#1)
+- [x] Buy The Bundle
+- [x] The Armstrong Number
+- [x] Treasure Hunt
+- [x] Help Cody
+- [x] Tables
+- [x] Equable Triangles
+- [x] Tracy's love.
+- [x] Find the eldest brother!
+- [x] Reverse The Linked list
+- [x] First Half!!
+- [x] The coding Challenges
+- [x] The bit flipper
+- [x] I don't like Repetition
+- [x] The Floating circle
+- [x] Binary to Decimal
+- [x] Exponentia!
+- [x] The Secure function : Xr
+- [x] The Report Card!
+- [x] I'll be the next
+- [x] Capitalize me
+- [x] Square of squares
+- [x] Find me the divisor count
+- [x] The Vowel Counter
+- [x] The closest to Average
+- [x] Let's get GCD
+- [x] The Predictor
+- [x] Reverse me
+- [x] The irritating Students
+- [x] Toggle Me!
+- [x] They see me Palindroming
+- [x] Avik and his Girlfriend's Necklace
+- [x] The War of Problem Setters
+- [x] The sum of Array
+- [x] The Triangle Game
+- [x] The Rock, Paper, Scissor Game
+- [x] Use loops to draw patterns(Pyramid)
+- [x] Sum of squares
+- [x] Learn Sum of numbers
+- [x] The light Switch
+- [x] Dcooooooooooder Fan
+- [x] Learning Strings and binary numbers
+- [x] Learning sorting numbers with if else
+- [x] Learning Prime numbers with Loop/Recursion
+- [x] The BlackJack with conditions
+- [x] The shortest Path Algo(Simple)
+- [x] How many weeks
+- [x] Learning Factorials with Loop/Recursion
+- [x] Learning User Input with Natural Numbers
+- [x] Printing number using loop
+- [x] Print Hello World
+
+- Medium
+- [ ] Arithmetic Sequence
+- [x] Cody's Team
+- [x] The Perfect Square
+- [x] Power Number
+- [x] Binary Operations
+- [x] Please Check the Password!
+- [ ] Stack! Stack! Stack!
+- [ ] Need for Shift
+- [ ] Reverse Bits
+- [ ] The Prime of the Binaries
+- [ ] Dictionary
+- [ ] Which Century is it?
+- [ ] The Skywalker Incursion
+- [ ] Queen Watches TV Series
+- [ ] Bruce Can't Convert
+- [ ] Minimum Buy
+- [ ] Tic-Tac-Toe
+- [ ] Winter is Coming
+- [ ] Steve Learns Etiquettes
+- [ ] Prime Ranges
+- [ ] Happy Friends
+- [ ] Chocolate Distribution
+- [ ] Count the Occurrences
+- [ ] Love Message
+- [ ] The Perfect Number
+- [ ] Rose and Jack's Marriage
+- [ ] Tokens
+- [ ] Word Numbers
+- [ ] Eric vs James
+- [ ] Reverse Everything.
+- [ ] Password Validator!
+- [ ] The 2's Complement
+- [ ] Where am I!!
+- [ ] The left Rotation
+- [ ] Only you can complete me.
+- [ ] The Number Pyramid!
+- [ ] MOM!! I wanna be unique.
+- [ ] Number of the Beast
+- [ ] Find that pair!
+- [ ] The Game of Brackets (simple)
+- [ ] Count trailing zeroes in n!
+- [ ] The simplest compression
+- [ ] The greater numbers
+- [ ] The one and only
+- [ ] Profit Matters!
+- [ ] Roots Roots Roots!
+- [ ] The Social Media Experiment!
+- [ ] The longest word.
+- [ ] The \^\_\^ -\_- String
+- [ ] The \^\_\^ String
+- [ ] Let's make Arrays allies.
+- [ ] Guess the Fibonacci number
+- [ ] Get the median
+- [ ] Play with Strings
+- [ ] The Predictor(Enhanced)
+- [ ] The pascal triangle
+- [ ] Prime numbers : My friends
+- [ ] The Last Man survived
+- [ ] The Big Multiplication
+- [ ] The Game of Power
+- [ ] I need equality
+- [ ] Anything You Can Do, I Can Do Better
+- [ ] Learn sequences fun way
+- [ ] String - Half of the half
+- [ ] The divisibility Test
+- [ ] The inquire
+- [ ] Learning Powers with Loops
+- [ ] Learning String with Pig Latin
+- [ ] Learning even odds with Strings and Loops
+
+- Hard
+- [ ] Depleting Ammunition
+- [ ] Bourne's Supremacy
+- [ ] Looking in the Mirror
+- [ ] Shoe Matching
+- [ ] Haunted Rooms
+- [ ] XOR and Arrays
+- [ ] Maximum Subarray
+- [ ] Cody's Assignment
+- [ ] Co-Prime Numbers
+- [ ] Word Numbers Ultimate!
+- [ ] Number to Word
+- [ ] Sequencial Naming
+- [ ] Coins and Countries
+- [ ] String Permutation
+- [ ] Movie Ratings
+- [ ] The Game of Bits
+- [ ] Spiral Matrix
+- [ ] Panda's Average
+- [ ] Jojo Learns Stacks
+- [ ] The Middle Team
+- [ ] Dobi Needs Logic
+- [ ] Jumping Jack
+- [ ] Maximized Reduction
+- [ ] Sliding Window
+- [ ] Equal Strings
+- [ ] Prime Subarray
+- [ ] Tournament
+- [ ] Sherlock plays The Great Game
+- [ ] The Game of Brackets
+- [ ] Find the majority element in array.
+- [ ] The alphabet pool
+- [ ] The Prime Search
+- [ ] Arrays and Merging
+- [ ] Great Power comes with great responsibility
+- [ ] Play with Sequences and Subsequence
+- [ ] The boring Sets
+- [ ] Fit Me In
+- [ ] The Cool Numbers

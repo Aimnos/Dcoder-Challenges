@@ -42,11 +42,8 @@ char* sum(char* b1, char* b2, int size) {
 
     } else {
       s[k] = '1' + carry;
-      if(s[k] == '2') {
+      if(s[k] == '2')
         s[k] = '0';
-        carry = 1;
-      } else
-        carry = 0;
 
     }
     i--;

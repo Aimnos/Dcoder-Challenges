@@ -92,7 +92,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Power Number
 - [x] Binary Operations
 - [x] Please Check the Password!
-- [ ] Stack! Stack! Stack!
+- [x] Stack! Stack! Stack!
 - [ ] Need for Shift
 - [ ] Reverse Bits
 - [ ] The Prime of the Binaries

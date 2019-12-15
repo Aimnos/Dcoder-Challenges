@@ -94,7 +94,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Please Check the Password!
 - [x] Stack! Stack! Stack!
 - [x] Need for Shift
-- [ ] Reverse Bits
+- [x] Reverse Bits
 - [ ] The Prime of the Binaries
 - [ ] Dictionary
 - [ ] Which Century is it?

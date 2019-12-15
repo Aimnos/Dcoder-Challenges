@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Print Hello World
 
 - Medium
-- [ ] Arithmetic Sequence
+- [x] Arithmetic Sequence
 - [x] Cody's Team
 - [x] The Perfect Square
 - [x] Power Number

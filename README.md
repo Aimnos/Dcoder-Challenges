@@ -3,6 +3,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 
 ## List of available solutions
 - Easy
+- [x] String Matching
 - [x] Leap Year
 - [x] Project Teams
 - [x] Circle of Numbers
@@ -86,6 +87,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Print Hello World
 
 - Medium
+- [ ] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
 - [x] The Perfect Square

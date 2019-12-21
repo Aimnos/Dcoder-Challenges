@@ -159,6 +159,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [ ] Learning Even Odds with Strings and Loops
 
 - Hard
+- [ ] CashBack
 - [ ] Depleting Ammunition
 - [ ] Bourne's Supremacy
 - [ ] Looking in the Mirror

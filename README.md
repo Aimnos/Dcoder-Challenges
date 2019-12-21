@@ -2,7 +2,7 @@
 My solutions to Dcoder challenges (mostly in C, will try to branch out as much as possible in the future), also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
 ## List of available solutions
-- Easy
+- Easy (82/82)
 - [x] String Matching
 - [x] Leap Year
 - [x] Project Teams
@@ -34,7 +34,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The Running Race
 - [x] The Beta Test Initiation
 - [x] Ordinal Representation
-- [ ] Fare (2/3) (Fails on TestCase#1)
+- [x] Fare
 - [x] Buy the Bundle
 - [x] The Armstrong Number
 - [x] Treasure Hunt
@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium
+- Medium (10/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -158,7 +158,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [ ] Learning String with Pig Latin
 - [ ] Learning Even Odds with Strings and Loops
 
-- Hard
+- Hard (0/39)
 - [ ] CashBack
 - [ ] Depleting Ammunition
 - [ ] Bourne's Supremacy

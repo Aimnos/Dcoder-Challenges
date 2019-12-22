@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (12/70)
+- Medium (13/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -99,7 +99,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Reverse Bits
 - [x] The Prime of the Binaries
 - [x] Dictionary
-- [ ] Which Century is it?
+- [x] Which Century is it?
 - [ ] The Skywalker Incursion
 - [ ] Queen Watches TV Series
 - [ ] Bruce Can't Convert

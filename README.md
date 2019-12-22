@@ -98,7 +98,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Need for Shift
 - [x] Reverse Bits
 - [x] The Prime of the Binaries
-- [ ] Dictionary
+- [x] Dictionary
 - [ ] Which Century is it?
 - [ ] The Skywalker Incursion
 - [ ] Queen Watches TV Series

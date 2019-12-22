@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (14/70)
+- Medium (15/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -101,7 +101,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Dictionary
 - [x] Which Century is it?
 - [x] The Skywalker Incursion
-- [ ] Queen Watches TV Series
+- [x] Queen Watches TV Series
 - [ ] Bruce Can't Convert
 - [ ] Minimum Buy
 - [ ] Tic-Tac-Toe

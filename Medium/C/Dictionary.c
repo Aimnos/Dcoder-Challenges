@@ -4,22 +4,22 @@
 
 //Compiler version gcc  6.3.0
 
-struct pair {
+typedef struct pair {
   char key[20];
   int value;
-};
+} pair;
 
 int main() {
   char key[20];
   int N, i, j, value, Q;
-  struct pair *p, *dictionary[20];
+  pair *p, *dictionary[20];
   scanf("%d", &N);
   for(i = 0; i < N; i++) {
     for(j = 0; j < 20; j++)
       key[j] = 0;
 
     scanf("%s %d", key, &value);
-    p = (struct pair*)malloc(sizeof(struct pair));
+    p = (pair*)malloc(sizeof(pair));
     for(j = 0; j < 20; j++)
       p->key[j] = key[j];
 

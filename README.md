@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (18/70)
+- Medium (19/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -105,7 +105,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Bruce Can't Convert
 - [x] Minimum Buy
 - [x] Tic-Tac-Toe
-- [ ] Winter is Coming
+- [x] Winter is Coming
 - [ ] Steve Learns Etiquettes
 - [ ] Prime Ranges
 - [ ] Happy Friends

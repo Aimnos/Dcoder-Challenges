@@ -3,7 +3,7 @@
 
 //Compiler version gcc 6.3.0
 
-void reverse(char *s, int size) {
+void reverse(char* s, int size) {
   int i, j;
   char temp;
   for(i = 0; i < size/2; i++) {

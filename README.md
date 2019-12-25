@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (26/70)
+- Medium (27/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -113,7 +113,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Count the Occurrences
 - [x] Love Message
 - [x] The Perfect Number
-- [ ] Rose and Jack's Marriage
+- [x] Rose and Jack's Marriage
 - [ ] Tokens
 - [ ] Word Numbers
 - [ ] Eric vs James

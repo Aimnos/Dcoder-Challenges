@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (31/70)
+- Medium (32/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -118,7 +118,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Word Numbers
 - [x] Eric vs James
 - [x] Reverse Everything.
-- [ ] Password Validator!
+- [x] Password Validator!
 - [ ] The 2's Complement
 - [ ] Where am I!!
 - [ ] The Left Rotation

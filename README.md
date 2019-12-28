@@ -2,8 +2,8 @@
 My solutions to Dcoder challenges (mostly in C, will try to branch out as much as possible in the future), also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
 ## List of available solutions
-- Easy (82/83)
-- [ ] SwapMaster Solves Symmetric Swap
+- Easy (83/83)
+- [x] SwapMaster Solves Symmetric Swap
 - [x] String Matching
 - [x] Leap Year
 - [x] Project Teams

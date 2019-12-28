@@ -2,7 +2,8 @@
 My solutions to Dcoder challenges (mostly in C, will try to branch out as much as possible in the future), also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
 ## List of available solutions
-- Easy (82/82)
+- Easy (82/83)
+- [ ] SwapMaster Solves Symmetric Swap
 - [x] String Matching
 - [x] Leap Year
 - [x] Project Teams
@@ -86,7 +87,8 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (41/70)
+- Medium (41/71)
+- [ ] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -158,7 +160,8 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [ ] Learning String with Pig Latin
 - [ ] Learning Even Odds with Strings and Loops
 
-- Hard (0/39)
+- Hard (0/40)
+- [ ] Love for Mathematics
 - [ ] CashBack
 - [ ] Depleting Ammunition
 - [ ] Bourne's Supremacy

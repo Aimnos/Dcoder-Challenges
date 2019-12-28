@@ -87,8 +87,8 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (41/71)
-- [ ] Word Frequency
+- Medium (42/71)
+- [x] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team

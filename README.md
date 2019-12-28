@@ -87,7 +87,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (42/71)
+- Medium (43/71)
 - [x] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
@@ -130,7 +130,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Number of the Beast
 - [x] Find that Pair!
 - [x] The Game of Brackets (Simple)
-- [ ] Count Trailing Zeroes in N!
+- [x] Count Trailing Zeroes in N!
 - [ ] The Simplest Compression
 - [ ] The Greater Numbers
 - [ ] The One and Only

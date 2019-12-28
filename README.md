@@ -86,7 +86,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (35/70)
+- Medium (36/70)
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
 - [x] Cody's Team
@@ -122,7 +122,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The 2's Complement
 - [x] Where am I!!
 - [x] The Left Rotation
-- [ ] Only You Can Complete Me.
+- [x] Only You Can Complete Me.
 - [ ] The Number Pyramid!
 - [ ] MOM!! I Wanna Be Unique.
 - [ ] Number of the Beast

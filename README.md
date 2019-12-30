@@ -87,7 +87,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (53/71)
+- Medium (54/71)
 - [x] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
@@ -141,7 +141,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The \^\_\^ -\_- String
 - [x] The \^\_\^ String
 - [x] Let's Make Arrays Allies.
-- [ ] Guess the Fibonacci Number
+- [x] Guess the Fibonacci Number
 - [ ] Get the Median
 - [ ] Play with Strings
 - [ ] The Predictor (Enhanced)

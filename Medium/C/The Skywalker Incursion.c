@@ -2,28 +2,18 @@
 
 //Compiler version gcc  6.3.0
 
-unsigned long int L(int x) {
-  switch(x) {
-    case 0:
-      return 2;
-    case 1:
-      return 1;
-    default:
-      return L(x - 1) + L(x - 2);
-  }
-}
-
 int main() {
-  unsigned long int N, x = 2;
-  int i = 1;
-  scanf("%lu", &N);
-  if(N == 0)
+  unsigned int x1 = 2, x2 = 1, aux, N;
+  scanf("%u", &N);
+  if(N < 2)
     printf("1");
   else {
-    while(x <= N)
-      x = L(++i);
-
-    printf("%lu", L(i));
+    while(x2 <= N) {
+      aux = x1 + x2;
+      x1 = x2;
+      x2 = aux;
+    }
+    printf("%u\n", x2);
   }
   return 0;
 }

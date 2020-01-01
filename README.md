@@ -87,7 +87,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (60/71)
+- Medium (61/71)
 - [x] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
@@ -148,7 +148,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The Pascal Triangle
 - [x] Prime Numbers : My Friends
 - [x] The Last Man Survived
-- [ ] The Big Multiplication
+- [x] The Big Multiplication
 - [ ] The Game of Power
 - [ ] I Need Equality
 - [ ] Anything You Can Do, I Can Do Better

@@ -87,7 +87,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Printing Number Using Loop
 - [x] Print Hello World
 
-- Medium (69/71)
+- Medium (70/71)
 - [x] Word Frequency
 - [x] Dcoder Admiration
 - [x] Arithmetic Sequence
@@ -157,7 +157,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The Divisibility Test
 - [x] The Inquire
 - [x] Learning Powers with Loops
-- [ ] Learning String with Pig Latin
+- [x] Learning String with Pig Latin
 - [ ] Learning Even Odds with Strings and Loops
 
 - Hard (0/40)

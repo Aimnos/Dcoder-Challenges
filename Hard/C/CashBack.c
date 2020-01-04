@@ -9,7 +9,7 @@ int main() {
     scanf("%li %li", &C, &X);
     M += C;
     M -= X;
-    if(X < lowest || lowest < 0)
+    if(X < lowest)
       lowest = X;
 
     if(C > highest)

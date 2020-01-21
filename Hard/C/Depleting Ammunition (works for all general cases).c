@@ -18,7 +18,7 @@ int main() {
         highest = x[i];
 
     for(i = 0; i < n; i++)
-      if(x[i] > 0 && x[i] <= highest && x[i] + 2*k >= highest) {
+      if(x[i] > 0 && x[i] + 2*k >= highest) {
         x[i] = 0;
         destroyed++;
       }

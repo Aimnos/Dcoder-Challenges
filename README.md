@@ -160,13 +160,13 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (5/40)
+- Hard (6/40)
 - [x] Love for Mathematics
 - [x] CashBack
 - [x] Depleting Ammunition
 - [x] Bourne's Supremacy
 - [x] Looking in the Mirror
-- [ ] Shoe Matching
+- [x] Shoe Matching
 - [ ] Haunted Rooms
 - [ ] XOR and Arrays
 - [ ] Maximum Subarray

@@ -160,7 +160,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (14/40)
+- Hard (15/40)
 - [x] Love for Mathematics
 - [x] CashBack
 - [x] Depleting Ammunition
@@ -175,7 +175,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Word Numbers Ultimate!
 - [x] Number to Word
 - [x] Sequencial Naming
-- [ ] Coins and Countries
+- [x] Coins and Countries
 - [ ] String Permutation
 - [ ] Movie Ratings
 - [ ] The Game of Bits

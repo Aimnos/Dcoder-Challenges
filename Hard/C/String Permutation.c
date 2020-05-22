@@ -5,9 +5,8 @@ void sort(char *s, unsigned short int size) {
   while(size > 0) {
     char biggest = 0;
     for(unsigned short int i = 1; i < size; i++)
-      if(s[i] > s[biggest]) {
+      if(s[i] > s[biggest])
         biggest = i;
-      }
 
     char aux = s[size - 1];
     s[size - 1] = s[biggest];
@@ -20,6 +19,7 @@ void permutate(char *s, unsigned short int size) {
   char *newS;
   newS = (char*)malloc(size*sizeof(char));
   permutateRecursive(s, size, newS, 0);
+  free(newS);
 }
 
 void permutateRecursive(char *s, unsigned short int sSize, char *newS, unsigned short int newSize) {

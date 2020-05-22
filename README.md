@@ -160,7 +160,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (17/40)
+- Hard (18/40)
 - [x] Love for Mathematics
 - [x] CashBack
 - [x] Depleting Ammunition
@@ -178,7 +178,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Coins and Countries
 - [x] String Permutation
 - [x] Movie Ratings
-- [ ] The Game of Bits
+- [x] The Game of Bits
 - [ ] Spiral Matrix
 - [ ] Panda's Average
 - [ ] Jojo Learns Stacks

@@ -162,7 +162,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (19/41)
+- Hard (20/41)
 - [x] Magic ChessBoard
 - [x] Love for Mathematics
 - [x] CashBack
@@ -182,7 +182,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] String Permutation
 - [x] Movie Ratings
 - [x] The Game of Bits
-- [ ] Spiral Matrix
+- [x] Spiral Matrix
 - [ ] Panda's Average
 - [ ] Jojo Learns Stacks
 - [ ] The Middle Team

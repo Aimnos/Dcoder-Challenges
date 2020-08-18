@@ -162,7 +162,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (24/41)
+- Hard (25/41)
 - [x] Magic ChessBoard
 - [x] Love for Mathematics
 - [x] CashBack
@@ -187,7 +187,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Jojo Learns Stacks
 - [x] The Middle Term
 - [x] Dobi Needs Logic!
-- [ ] Jumping Jack
+- [x] Jumping Jack
 - [ ] Maximized Reduction
 - [ ] Sliding Window
 - [ ] Equal Strings

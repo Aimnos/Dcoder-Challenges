@@ -162,7 +162,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (32/41)
+- Hard (33/41)
 - [x] Magic ChessBoard
 - [x] Love for Mathematics
 - [x] CashBack
@@ -195,7 +195,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Tournament
 - [x] Sherlock Plays the Great Game
 - [x] The Game of Brackets
-- [ ] Find the Majority Element in Array.
+- [x] Find the Majority Element in Array.
 - [ ] The Alphabet Pool
 - [ ] The Prime Search
 - [ ] Arrays and Merging

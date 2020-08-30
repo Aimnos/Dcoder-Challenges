@@ -162,7 +162,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] Learning String with Pig Latin
 - [x] Learning Even Odds with Strings and Loops
 
-- Hard (36/41)
+- Hard (37/41)
 - [x] Magic ChessBoard
 - [x] Love for Mathematics
 - [x] CashBack
@@ -199,7 +199,7 @@ My solutions to Dcoder challenges (mostly in C, will try to branch out as much a
 - [x] The Alphabet Pool
 - [x] The Prime Search
 - [x] Arrays and Merging
-- [ ] Great Power Comes with Great Responsibility
+- [x] Great Power Comes with Great Responsibility
 - [ ] Play with Sequences and Subsequence
 - [ ] The Boring Sets
 - [ ] Fit Me In

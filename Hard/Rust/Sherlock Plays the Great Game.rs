@@ -11,9 +11,9 @@ fn main() {
 		let mut A = String::new();
 		io::stdin().read_line(&mut A).unwrap();
 		let mut A: Vec<u16> = A.split_whitespace().map(|s| s.parse().unwrap()).collect();
-		if A.len() % 2 == 0 || A.iter().fold(0, |acc, x| acc ^ x) == 0 {
+		if N % 2 == 0 || A.iter().fold(0, |acc, x| acc ^ x) == 0 {
 			println!("Sherlock");
-		} else  {
+		} else {
 			println!("Watson");
 		}
 	}

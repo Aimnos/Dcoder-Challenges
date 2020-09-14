@@ -1,18 +1,16 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int T, N, first, last, i;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d", &N);
+	unsigned char T, last;
+	unsigned int N;
+	scanf("%hhu", &T);
+	for(unsigned char i = 0; i < T; i++) {
+		scanf("%u", &N);
 		last = N%10;
-		first = N;
-		while(first >= 10)
-			first /= 10;
-			
-		printf("%d\n", first + last);
+		while(N > 10)
+			N /= 10;
+
+		printf("%hhu\n", N + last);
 	}
 	return 0;
 }

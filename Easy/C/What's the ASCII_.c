@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	char x;
-	scanf(" %c", &x);
-	printf("%d", x);
+	char character;
+	scanf(" %c", &character);
+	printf("%hhu", character);
 	return 0;
 }

@@ -1,21 +1,24 @@
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdlib.h>
 
 int main() {
-	int N, i, j;
-	char string[26];
-	scanf("%d", &N);
-	for(i = 0; i < 26; i++)
-		string[i] = 0;
-
-	for(i = 0; i < N; i++)
+	unsigned char N;
+	scanf("%hhu", &N);
+	char *string = (char *) malloc(N * sizeof (char));
+	for(unsigned char i = 0; i < N; i++)
 		scanf(" %c", &string[i]);
 
-	for(i = 0; i < 26; i++)
-		for(j = 0; j < N; j++)
-			if(string[j] == i + 64 || string[j] == i + 96)
-				printf("%c ", string[j]);
+	unsigned char smallest_pos;
+	for(unsigned char i = N; i > 1; i--) {
+		smallest_pos = 0;
+		for(unsigned char j = 1; j < i; j++)
+			if(string[j] + 32 * (string[j] >= 'A' && string[j] <= 'Z') < string[smallest_pos] + 32 * (string[smallest_pos] >= 'A' && string[smallest_pos] <= 'Z'))
+				smallest_pos = j;
 
+		printf("%c ", string[smallest_pos]);
+		string[smallest_pos] = string[i - 1];
+	}
+	printf("%c", string[0]);
+	free(string);
 	return 0;
 }

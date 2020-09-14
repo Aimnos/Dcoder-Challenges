@@ -1,15 +1,15 @@
-use std::io;
+use std::io::{self, BufRead};
 
 fn main() {
-	let mut n = String::new();
-	io::stdin().read_line(&mut n).unwrap();
-	let n: u16 = n.trim_end().parse().unwrap();
-	let mut sequence = String::new();
-	io::stdin().read_line(&mut sequence).unwrap();
-	let sequence: Vec<u32> = sequence.split_whitespace().map(|e| e.parse().unwrap()).collect();
-	let mut sequence = longest_increasing_subsequence(&sequence, n);
-	let first = sequence.remove(0).to_string();
-	print!("{}", sequence.iter().fold(first, |acc, num| acc + " " + &num.to_string()));
+	let stdin = io::stdin();
+	let mut lines = stdin.lock().lines();
+	let n: u16 = lines.next().unwrap().unwrap().trim().parse().unwrap();
+	let sequence: Vec<u32> = lines.next().unwrap().unwrap().split_whitespace().map(|e| e.parse().unwrap()).collect();
+	let mut subsequence = longest_increasing_subsequence(&sequence, n);
+	print!("{}", subsequence.remove(0));
+	for number in subsequence {
+		print!(" {}", number);
+	}
 }
 
 fn longest_increasing_subsequence(v: &Vec<u32>, size: u16) -> Vec<u32> {
@@ -21,17 +21,15 @@ fn longest_increasing_subsequence(v: &Vec<u32>, size: u16) -> Vec<u32> {
 		let mut upper = best;
 		while lower < upper {
 			let mid = (lower + upper) / 2;
-			if v.get(*indexes.get(mid).unwrap()) < v.get(i) {
-				upper = mid;
-			} else {
-				lower = mid + 1;
+			match v.get(*indexes.get(mid).unwrap()) < v.get(i) {
+				true => upper = mid,
+				false => lower = mid + 1
 			}
 		}
 		indexes.push(i);
-		if lower > 0 {
-			prev.push(*indexes.get(lower - 1).unwrap());
-		} else {
-			prev.push(0);
+		match lower {
+			0 => prev.push(0),
+			_ => prev.push(*indexes.get(lower - 1).unwrap())
 		}
 		if lower < best {
 			indexes.swap_remove(lower);

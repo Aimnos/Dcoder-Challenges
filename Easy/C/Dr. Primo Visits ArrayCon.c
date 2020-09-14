@@ -1,29 +1,34 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int N, A[1000], i, j, isprime, cont = 0;
-	scanf("%d", &N);
-	for(i = 0; i < N; i++)
-		scanf("%d", &A[i]);
-
-	for(i = 0; i < N; i++) {
-		isprime = 1;
-		if(A[i] >= 2)
-			for(j = 2; j <= A[i]/2; j++) {
-				if(A[i]%j == 0) {
-					isprime = 0;
+	unsigned short N, count = 0;
+	unsigned int A;
+	scanf("%hu", &N);
+	for(unsigned short i = 0; i < N; i++) {
+		scanf("%u", &A);
+		switch(A) {
+			case 2:
+			case 3:
+				count++;
+			case 0:
+			case 1:
+				break;
+			default:
+				if(A % 2 == 0 || A % 2 == 0)
 					break;
-				}
-			}
-		else
-			isprime = 0;
 
-		if(isprime == 1)
-			cont++;
-			
+				unsigned int j = 5;
+				while(j * j <= A) {
+					if(A % j == 0 || A% (j + 2) == 0)
+						break;
+					else
+						j += 5;
+
+				}
+				count++;
+				break;
+		}
 	}
-	printf("%d", cont);
+	printf("%hu", count);
 	return 0;
 }

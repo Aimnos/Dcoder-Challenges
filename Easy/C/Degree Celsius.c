@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int T;
-	scanf("%d", &T);
-	printf("%d", T*18/10 + 32);
+	unsigned short T;
+	scanf("%hu", &T);
+	printf("%hu", 18 * T / 10 + 32);
 	return 0;
 }

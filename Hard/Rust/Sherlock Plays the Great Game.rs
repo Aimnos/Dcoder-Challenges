@@ -1,20 +1,18 @@
-use std::io;
+use std::io::{self, BufRead};
 
 fn main() {
-	let mut T = String::new();
-	io::stdin().read_line(&mut T).unwrap();
-	let T: u16 = T.trim_end().parse().unwrap();
+	let stdin = io::stdin();
+	let mut lines = stdin.lock().lines();
+	let T: u16 = lines.next().unwrap().unwrap().trim().parse().unwrap();
 	for _ in 0..T {
-		let mut N = String::new();
-		io::stdin().read_line(&mut N).unwrap();
-		let N: u16 = N.trim_end().parse().unwrap();
-		let mut A = String::new();
-		io::stdin().read_line(&mut A).unwrap();
-		let mut A: Vec<u16> = A.split_whitespace().map(|s| s.parse().unwrap()).collect();
-		if N % 2 == 0 || A.iter().fold(0, |acc, x| acc ^ x) == 0 {
-			println!("Sherlock");
-		} else {
-			println!("Watson");
+		let N: u16 = lines.next().unwrap().unwrap().trim().parse().unwrap();
+		let mut A: Vec<u16> = lines.next().unwrap().unwrap().split_whitespace().map(|i| i.parse().unwrap()).collect();
+		match N % 2 {
+			0 => println!("Sherlock"),
+			_ => match A.iter().fold(0, |acc, x| acc ^ x) {
+				0 => println!("Sherlock"),
+				_ => println!("Watson")
+			}
 		}
 	}
 }

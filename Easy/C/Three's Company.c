@@ -1,15 +1,15 @@
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdlib.h>
 
 int main() {
-	int N, i, j;
-	char input_string[20], output_string[60];
-	scanf("%d %[^\n]", &N, &input_string);
-	for(i = 0; i <= N; i++)
-		for(j = i*3; j <= i*3 + 2; j++)
-			output_string[j] = input_string[i];
-			
-	printf("%s", output_string);
+	unsigned char N;
+	scanf("%hhu", &N);
+	char *string = (char *) malloc((N + 1) * sizeof (char));
+	scanf("%s", string);
+	for(unsigned char i = 0; i < N; i++)
+		for(unsigned char j = 0; j < 3; j++)
+			printf("%c", string[i]);
+
+	free(string);
 	return 0;
 }

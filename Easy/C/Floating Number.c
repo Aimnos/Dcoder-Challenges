@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-	int T;
-	float N;
-	scanf("%d", &T);
-	for(int i = 0; i < T; i++) {
-		scanf("%f", &N);
-		printf("%.2f\n", N);
+	unsigned short T;
+	double N;
+	scanf("%hu", &T);
+	for(unsigned short i = 0; i < T; i++) {
+		scanf("%lf", &N);
+		printf("%.2lf\n", N);
 	}
 	return 0;
 }

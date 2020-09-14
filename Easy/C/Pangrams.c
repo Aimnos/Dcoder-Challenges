@@ -1,32 +1,24 @@
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdbool.h>
 
 int main() {
-	int i, j, cont, letters;
-	char string[100];
-	for(i = 0; i < 100; i++)
-		string[i] = 0;
+	unsigned char count = 0;
+	char S[101];
+	bool letters[26];
+	for(unsigned char i = 0; i < 26; i++)
+		letters[i] = true;
 
-	scanf(" %s", string);
-	for(i = 0; i < 100; i++)
-		if(string[i] >= 97 && string[i] <= 122)
-			string[i] -= 32;
-
-	for(i = 65; i <= 90; i++) {
-		for(j = 0; j < 100; j++)
-			if(string[j] == i)
-				cont++;
-
-		if(cont > 0)
-			letters++;
-
-		cont = 0;
+	scanf(" %s", S);
+	unsigned char i = 0;
+	while(S[i] != 0) {
+		S[i] += 32 * (S[i] >= 'A' && S[i] <= 'Z');
+		count += letters[S[i] - 'a'];
+		letters[S[i++] - 'a'] = false;
 	}
-	if(letters == 26)
+	if(count == 26)
 		printf("YES");
 	else
 		printf("NO");
-		
+
 	return 0;
 }

@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int N, D, i;
-	scanf("%d %d", &N, &D);
-	for (i = 2; i <= N; i++)
-		while(N%i == 0 && D%i == 0) {
-			N /= i;
-			D /= i;
-		}
-		
-	printf("%d %d", N, D);
+	unsigned short N, D, x, y;
+	scanf("%hu %hu", &N, &D);
+	x = D;
+	y = N;
+	while(y > 0) {
+		x %= y;
+		y ^= x;
+		x ^= y;
+		y ^= x;
+	}
+	printf("%hu %hu", N / x, D / x);
 	return 0;
 }

@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int N, *A, i;
-  scanf("%d", &N);
-  A = (int*)malloc(N*sizeof(int));
-  for(i = 0; i < N; i++)
-    scanf("%d", &A[i]);
+	unsigned char N;
+	scanf("%hhu", &N);
+	unsigned short *A = (unsigned short *) malloc(N * sizeof (short));
+	for(unsigned char i = 0; i < N; i++)
+		scanf("%hu", &A[i]);
 
-  for(i = N - 1; i >= 0; i--)
-    if(A[i]>= 1 && A[i] <= 1000)
-      printf("%d ", A[i]);
+	for(unsigned char i = N; i > 0; i--)
+		printf("%hu ", A[i - 1]);
 
-  free(A);
-  return 0;
+	free(A);
+	return 0;
 }

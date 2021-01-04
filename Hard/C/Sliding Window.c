@@ -8,7 +8,7 @@ int main() {
 	scanf("%d", &T);
 	for(i = 0; i < T; i++) {
 		scanf("%d %d", &N, &K);
-		trees = (int *)malloc(N * sizeof (int));
+		trees = (int *) malloc(N * sizeof (int));
 		for(j = 0; j < N; j++)
 			scanf("%d", &trees[j]);
 

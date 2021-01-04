@@ -8,7 +8,7 @@ int main() {
 	scanf("%d", &T);
 	for(int i = 0; i < T; i++) {
 		scanf("%d", &N);
-		A = (int *)malloc(N * sizeof(int));
+		A = (int *) malloc(N * sizeof(int));
 		for(int j = 0; j < N; j++) {
 			scanf("%d", &A[j]);
 		}

@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int x;
+	unsigned char x;
 	double y;
 	scanf("%lf", &y);
-	x = (int) y;
-	if (x == y)
-		printf("%d %d", x, x);
+	x = (unsigned char) y;
+	if(x == y)
+		printf("%hhu %hhu", x, x);
 	else
-		printf("%d %d", x + 1, x);
-		
+		printf("%hhu %hhu", x + 1, x);
+
 	return 0;
 }

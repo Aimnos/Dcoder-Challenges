@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int a, b, i, x = 0;
-	scanf("%d %d", &a, &b);
-	for(i = a; i <= b; i++)
-		x += i*i;
-		
-	printf("%d", x);
+	unsigned char a, b;
+	// TestCase#3 has an ansewr bigger than 65535
+	unsigned int sum;
+	scanf("%hhu %hhu", &a, &b);
+	for(unsigned char x = a; x <= b; x++)
+		sum += x * x;
+
+	printf("%u", sum);
 	return 0;
 }

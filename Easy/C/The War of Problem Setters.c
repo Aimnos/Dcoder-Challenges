@@ -1,18 +1,17 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int a, b, c, d;
-	scanf("%d %d %d", &a, &b, &c);
-	d = a + b + c;
-	scanf("%d %d %d", &a, &b, &c);
-	if(d == a + b + c)
-		printf("None 0");
-	else if(d > a + b + c)
-		printf("Garry %d", d - a - b - c);
+	unsigned char Garry = 0, Sharry = 0, a, b, c;
+	scanf("%hhu %hhu %hhu", &a, &b, &c);
+	Garry = a + b + c;
+	scanf("%hhu %hhu %hhu", &a, &b, &c);
+	Sharry = a + b + c;
+	if(Garry > Sharry)
+		printf("Garry %hhu", Garry - Sharry);
+	else if(Garry < Sharry)
+		printf("Sharry %hhu", Sharry - Garry);
 	else
-		printf("Sharry %d", a + b + c - d);
-		
+		printf("None 0");
+
 	return 0;
 }

@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int n, i;
-	long long x;
-	double y;
-	scanf("%d", &n);
-	if(n >= 0) {
-		printf("1");
-		for(i = 0, x = 2; i < n; i++, x *= 2)
-			printf(",%d", x);
-
-	} else {
+	signed short n;
+	float power_of_two = 1;
+	scanf("%hd", &n);
+	if(n < 0) {
 		printf("1.0");
-		for(i = 0, y = 0.5; i > n; i--, y /= 2)
-			printf(",%.*f", -i + 1, y);
-			
+		for(signed short i = 0; i > n; i--) {
+			power_of_two /= 2;
+			printf(",%.*f", - i + 1, power_of_two);
+		}
+	} else {
+		printf("1");
+		for(unsigned short i = 0; i < n; i++) {
+			power_of_two *= 2;
+			printf(",%.0f", power_of_two);
+		}
 	}
 	return 0;
 }

@@ -1,25 +1,22 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int n, i, cont = 0, d = 0;
-	scanf("%d", &n);
-	for(i = 1; i <= n; i *= 10) {
-		if(cont == 6)
-			break;
-
-		if((n/i)%10 == d)
-			cont++;
+	unsigned char binary[15];
+	scanf("%s", binary);
+	unsigned short count = 0;
+	unsigned char digit = 0;
+	for(unsigned char i = 0; binary[i] != 0; i++) {
+		if(binary[i] == digit)
+			count++;
 		else {
-			d = !d;
-			cont = 1;
+			digit = binary[i];
+			count = 1;
+		}
+		if(count >= 6) {
+			printf("Bad");
+			return 0;
 		}
 	}
-	if(cont == 6)
-		printf("Bad");
-	else
-		printf("Good");
-		
+	printf("Good");
 	return 0;
 }

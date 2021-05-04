@@ -1,41 +1,28 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int m, n, p, small, med, large;
-	scanf("%d %d %d", &m, &n, &p);
+	unsigned short m, n, p;
+	scanf("%hu %hu %hu", &m, &n, &p);
 	if(m < n) {
-		if(m < p) {
-			small = m;
-			if(n < p) {
-				med = n;
-				large = p;
-			} else {
-				med = p;
-				large = n;
-			}
-		} else {
-			small = p;
-			med = m;
-			large = n;
+		if(n < p)
+			printf("%hu %hu %hu", m, n, p);
+		else {
+			if(m < p)
+				printf("%hu %hu %hu", m, p, n);
+			else
+				printf("%hu %hu %hu", p, m, n);
+
 		}
 	} else {
-		if(n < p) {
-			small = n;
-			if(m < p) {
-				med = m;
-				large = p;
-			} else {
-				med = p;
-				large = m;
-			}
-		} else {
-			small = p;
-			med = n;
-			large = m;
+		if(m < p)
+			printf("%hu %hu %hu", n, m, p);
+		else {
+			if(n < p)
+				printf("%hu %hu %hu", n, p, m);
+			else
+				printf("%hu %hu %hu", p, n, m);
+
 		}
 	}
-	printf("%d %d %d", small, med, large);
 	return 0;
 }

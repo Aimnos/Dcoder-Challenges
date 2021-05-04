@@ -1,23 +1,15 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int n, list[100], i;
-	double avg = 0;
-	for(i = 0; i < 100; i++)
-		list[i] = 0;
-
-	scanf("%d", &n);
-	for(i = 0; i < n; i++) {
-		scanf("%d", &list[i]);
-		avg += list[i];
+	unsigned char n;
+	float average = 0.0;
+	scanf("%hhu", &n);
+	for(unsigned char i = 0; i < n; i++) {
+		unsigned short element;
+		scanf("%hu", &element);
+		average += element;
 	}
-	avg /= n;
-	if(2*avg <= 2*(int)avg + 1)
-		printf("%d", (int)avg);
-	else
-		printf("%d", (int)avg + 1);
-		
+	average /= (float) n;
+	printf("%hu", (unsigned short) average + (2 * average <= 2 * (unsigned short) average + 1));
 	return 0;
 }

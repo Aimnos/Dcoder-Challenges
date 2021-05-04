@@ -10,12 +10,12 @@ fn main() {
 	let x: u8 = numbers.next().unwrap().parse().unwrap();
 	let y: u8 = numbers.next().unwrap().parse().unwrap();
 	for (i, c) in string.trim().chars().enumerate() {
-		match i {
-			a if a == x as usize || a == y as usize => match c.is_ascii_lowercase() {
-				true => print!("{}", c.to_ascii_uppercase()),
-				false => print!("{}", c.to_ascii_lowercase())
+		match i as u8 == x || i as u8 == y {
+			true => match c.is_lowercase() {
+				true => print!("{}", c.to_uppercase()),
+				false => print!("{}", c.to_lowercase())
 			},
-			_ => print!("{}", c)
+			false => print!("{}", c)
 		}
 	}
 }

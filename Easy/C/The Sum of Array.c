@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int N, x = 0, a, i;
-	scanf("%d", &N);
-	for(i = 0; i < N; i++) {
-		scanf("%d", &a);
-		x += a;
+	unsigned char N, element;
+	unsigned short sum = 0;
+	scanf("%hhu", &N);
+	for(unsigned char i = 0; i < N; i++) {
+		scanf("%hhu", &element);
+		sum += element;
 	}
-	printf("%d", x);
+	printf("%hu", sum);
 	return 0;
 }

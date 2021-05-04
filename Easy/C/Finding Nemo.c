@@ -9,7 +9,7 @@ int main() {
 		scanf("%s", word);
 		if(strcmp(word, "Nemo") == 0) {
 			printf("%hhu", i + 1);
-			break;
+			return 0;
 		}
 	}
 	return 0;

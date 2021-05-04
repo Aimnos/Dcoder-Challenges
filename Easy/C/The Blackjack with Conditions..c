@@ -1,18 +1,16 @@
-#include  <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdio.h>
 
 int main() {
-  int a, b;
-  scanf("%d %d", &a, &b);
-  if(a + b > 21) {
-    if(a == 11 || b == 11)
-      printf("%d", a + b - 10);
-    else
-      printf("0");
+	unsigned char a, b;
+	scanf("%hhu %hhu", &a, &b);
+	if(a + b > 21) {
+		if(a == 11 || b == 11)
+			printf("%hhu", a + b - 10);
+		else
+			printf("0");
 
-  } else
-    printf("%d", a + b);
+	} else
+		printf("%hhu", a + b);
 
-  return 0;
+	return 0;
 }

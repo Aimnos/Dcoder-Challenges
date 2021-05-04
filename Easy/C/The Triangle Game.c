@@ -1,21 +1,15 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int i, j;
-	char string[20];
-	for(i = 0; i < 20; i++)
-		string[i] = 0;
-
-	scanf("%[^\n]", string);
-	for(i = 0; i < 20; i++) {
-		if(string[i] == 0)
+	unsigned char input[21];
+	scanf("%s", input);
+	for(unsigned char i = 0; i < 21; i++) {
+		if(input[i] == 0)
 			break;
 
-		for(j = 0; j <= i; j++)
-			printf("%c", string[j]);
-			
+		for(unsigned char j = 0; j <= i; j++)
+			printf("%c", input[j]);
+
 		printf("\n");
 	}
 	return 0;

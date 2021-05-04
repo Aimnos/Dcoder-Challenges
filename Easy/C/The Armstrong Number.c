@@ -1,14 +1,13 @@
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <math.h>
 
 int main() {
-	int N;
-	scanf("%d", &N);
-	if(N == (N/100)*(N/100)*(N/100) + ((N/10)%10)*((N/10)%10)*((N/10)%10) + (N%10)*(N%10)*(N%10))
+	unsigned short N;
+	scanf("%hu", &N);
+	if(N == (unsigned short) pow(N / 100, 3) + (unsigned short) pow((N / 10) % 10, 3) + (unsigned short) pow(N % 10, 3))
 		printf("YES");
 	else
 		printf("NO");
-		
+
 	return 0;
 }

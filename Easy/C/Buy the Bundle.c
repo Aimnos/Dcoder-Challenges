@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int T, N, M, i;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d %d", &N, &M);
-		if(M%N == 0)
+	unsigned char T, N;
+	unsigned int M;
+	scanf("%hhu", &T);
+	for(unsigned char i = 0; i < T; i++) {
+		scanf("%hhu %u", &N, &M);
+		if(M % N == 0)
 			printf("Yes\n");
 		else
 			printf("No\n");
-			
+
 	}
 	return 0;
 }

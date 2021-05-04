@@ -1,22 +1,25 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int i, cont = 0;
-	char string[100];
-	for(i = 0; i < 100; i++)
-		string[i] = 0;
-
+	unsigned char string[1001];
 	scanf("%[^\n]", string);
-	for(i = 0; i < 100; i++) {
-		if(string[i] == 0)
-			break;
-
-		if(string[i] == 65 || string[i] == 69 || string[i] == 73 || string[i] == 79 || string[i] == 85 || string[i] == 97 || string[i] == 101 || string[i] == 105 || string[i] == 111 || string[i] == 117)
-			cont++;
-			
+	unsigned short vowels = 0;
+	for(unsigned char i = 0; string[i] != 0; i++) {
+		switch(string[i]) {
+			case 'A':
+			case 'E':
+			case 'I':
+			case 'O':
+			case 'U':
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+				vowels++;
+				break;
+		}
 	}
-	printf("%d", cont);
+	printf("%hu", vowels);
 	return 0;
 }

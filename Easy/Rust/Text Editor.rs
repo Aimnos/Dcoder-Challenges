@@ -5,7 +5,6 @@ fn main() {
 	let mut lines = stdin.lock().lines();
 	let T: u8 = lines.next().unwrap().unwrap().trim().parse().unwrap();
 	for _ in 0..T {
-		let s = lines.next().unwrap().unwrap();
-		println!("{}", s.trim().to_uppercase());
+		println!("{}", lines.next().unwrap().unwrap().trim().to_uppercase());
 	}
 }

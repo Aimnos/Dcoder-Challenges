@@ -7,8 +7,6 @@ fn main() {
 	let line = lines.next().unwrap().unwrap();
 	let string = line.trim();
 	for c in string.chars() {
-		for _ in 0..3 {
-			print!("{}", c);
-		}
+		print!("{}{}{}", c, c, c);
 	}
 }

@@ -1,15 +1,13 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int a, b = 0, i;
-	for(i = 0; i < 5; i++) {
-		scanf("%d", &a);
-		if(a > b)
-			b = a;
-			
+	unsigned char age, eldest = 0;
+	for(unsigned char i = 0; i < 5; i++) {
+		scanf("%hhu", &age);
+		if(age > eldest)
+			eldest = age;
+
 	}
-	printf("%d", b);
+	printf("%hhu", eldest);
 	return 0;
 }

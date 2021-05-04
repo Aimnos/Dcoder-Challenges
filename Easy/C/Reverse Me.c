@@ -1,14 +1,19 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int n, i, x = 0;
-	scanf("%d", &n);
-	for(i = 1; i <=n; i *= 10) {
-		x *= 10;
-		x += (n/i)%10;
+	unsigned char n[6];
+	scanf("%s", n);
+	unsigned char i = 0;
+	while(i < 6) {
+		if(n[i] == '0' || n[i] == 0) {
+			i--;
+			break;
+		}
+		i++;
 	}
-	printf("%d", x);
+	while(i > 0)
+		printf("%c", n[i--]);
+
+	printf("%c", n[0]);
 	return 0;
 }

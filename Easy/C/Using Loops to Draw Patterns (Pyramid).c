@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 int main() {
-	int i, j;
-	for(i = 5; i > 0; i--) {
-		for(j = 1; j < i; j++)
+	for(unsigned char i = 0; i < 5; i++) {
+		for(unsigned j = i; j < 4; j++)
 			printf(" ");
 
-		for(j = 1; j < 12 - 2*i; j++)
-			printf("*");
+		for(unsigned char j = 0; j < i; j++)
+			printf("**");
 
-		printf("\n");
+		printf("*\n");
 	}
 	return 0;
 }

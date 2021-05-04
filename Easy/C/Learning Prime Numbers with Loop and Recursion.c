@@ -1,23 +1,19 @@
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdlib.h>
+#include <stdbool.h>
 
 int main() {
-	int m, n, i, j, isPrime;
-	scanf("%d %d", &m, &n);
-	for(i = m; i <= n; i++) {
-		isPrime = 1;
-		if(i > 1) {
-			for(j = 2; j < i; j++)
-				if(i%j == 0) {
-					isPrime = 0;
-					break;
-				}
-				
-			if(isPrime == 1)
-				printf("%d\n", i);
+	unsigned int m, n;
+	scanf("%u %u", &m, &n);
+	bool *primes = (bool *) calloc(n, sizeof (bool));
+	for(unsigned int x = 2; x <= n; x++) {
+		if(!primes[x] && x >= m)
+			printf("%u\n", x);
 
-		}
+		for(unsigned int i = 2; i <= n / x; i++)
+			primes[x * i] = true;
+
 	}
+	free(primes);
 	return 0;
 }

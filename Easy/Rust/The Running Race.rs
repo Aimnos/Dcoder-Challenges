@@ -8,10 +8,10 @@ fn main() {
 	let X: u8 = buf.next().unwrap().parse().unwrap();
 	let Y: u8 = buf.next().unwrap().parse().unwrap();
 	match X > Y {
-		true => println!("Alex"),
+		true => print!("Alex"),
 		false => match X < Y {
-			true => println!("Ryan"),
-			false => println!("Draw")
+			true => print!("Ryan"),
+			false => print!("Draw")
 		}
 	};
 }

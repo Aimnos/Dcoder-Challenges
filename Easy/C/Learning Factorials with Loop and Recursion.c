@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-	int n, x = 1, i;
-	scanf("%d", &n);
-	for(i = 2; i <= n; i++)
-		x *= i;
-	
-	printf("%d", x);
+	unsigned char n;
+	scanf("%hhu", &n);
+	if(n == 0 || n ==1)
+		printf("1");
+	else {
+		unsigned int factorial = 1;
+		for(unsigned char x = 2; x <= n; x++)
+			factorial *= x;
+
+		printf("%u", factorial);
+	}
 	return 0;
 }

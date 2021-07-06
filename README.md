@@ -2,7 +2,7 @@
 My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
 ## List of available solutions (197/197)
-- Easy (84/84)
+- Easy (85/85)
 - [x] Floating Number                             (C, Rust)
 - [x] SwapMaster Solves Symmetric Swap            (C, Rust)
 - [x] String Matching                             (C, Rust)
@@ -87,8 +87,9 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning User Input with Natural Numbers    (C, Rust)
 - [x] Printing Number Using Loop                  (C, Rust)
 - [x] Print Hello World                           (C, Rust)
+- [x] Rotate Array                                (C)
 
-- Medium (72/72)
+- Medium (73/73)
 - [x] Simple Multiple Problem                     (C)
 - [x] Word Frequency                              (C)
 - [x] Dcoder Admiration                           (C)
@@ -161,8 +162,9 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning Powers with Loops                  (C)
 - [x] Learning String with Pig Latin              (C)
 - [x] Learning Even Odds with Strings and Loops   (C)
+- [x] Symmetric Matrix                            (C)
 
-- Hard (41/41)
+- Hard (42/42)
 - [x] Magic ChessBoard                            (C)
 - [x] Love for Mathematics                        (C)
 - [x] CashBack                                    (C)
@@ -204,3 +206,4 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] The Boring Sets                             (C)
 - [x] Fit Me In                                   (C)
 - [x] The Cool Numbers                            (C)
+- [x] Alice and Dictionary                        (Rust)

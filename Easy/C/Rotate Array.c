@@ -8,8 +8,9 @@ int main() {
 	for(unsigned int i = 0; i < N; i++)
 		scanf("%u", &Arr[i]);
 
-	for(unsigned int i = 0; i < N; i++)
-		printf("%u ", Arr[(N - K + i) % N]);
+	printf("%u", Arr[N - K]);
+	for(unsigned int i = 1; i < N; i++)
+		printf(" %u", Arr[(N - K + i) % N]);
 
 	free(Arr);
 	return 0;

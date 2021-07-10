@@ -87,7 +87,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning User Input with Natural Numbers    (C, Rust)
 - [x] Printing Number Using Loop                  (C, Rust)
 - [x] Print Hello World                           (C, Rust)
-- [x] Rotate Array                                (C)
+- [x] Rotate Array                                (C, Rust)
 
 - Medium (73/73)
 - [x] Simple Multiple Problem                     (C)
@@ -162,7 +162,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning Powers with Loops                  (C)
 - [x] Learning String with Pig Latin              (C)
 - [x] Learning Even Odds with Strings and Loops   (C)
-- [x] Symmetric Matrix                            (C)
+- [x] Symmetric Matrix                            (C, Rust)
 
 - Hard (42/42)
 - [x] Magic ChessBoard                            (C)
@@ -206,4 +206,4 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] The Boring Sets                             (C)
 - [x] Fit Me In                                   (C)
 - [x] The Cool Numbers                            (C)
-- [x] Alice and Dictionary                        (Rust)
+- [x] Alice and Dictionary                        (C, Rust)

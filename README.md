@@ -90,7 +90,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Rotate Array                                (C, Rust)
 
 - Medium (73/73)
-- [x] Simple Multiple Problem                     (C)
+- [x] Simple Multiple Problem                     (C, Rust)
 - [x] Word Frequency                              (C)
 - [x] Dcoder Admiration                           (C)
 - [x] Arithmetic Sequence                         (C)

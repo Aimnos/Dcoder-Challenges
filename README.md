@@ -3,6 +3,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 
 ## List of available solutions (200/200)
 - Easy (85/85)
+- [x] Rotate Array                                (C, Rust)
 - [x] Floating Number                             (C, Rust)
 - [x] SwapMaster Solves Symmetric Swap            (C, Rust)
 - [x] String Matching                             (C, Rust)
@@ -87,9 +88,9 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning User Input with Natural Numbers    (C, Rust)
 - [x] Printing Number Using Loop                  (C, Rust)
 - [x] Print Hello World                           (C, Rust)
-- [x] Rotate Array                                (C, Rust)
 
 - Medium (73/73)
+- [x] Symmetric Matrix                            (C, Rust)
 - [x] Simple Multiple Problem                     (C, Rust)
 - [x] Word Frequency                              (C)
 - [x] Dcoder Admiration                           (C)
@@ -162,11 +163,11 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning Powers with Loops                  (C)
 - [x] Learning String with Pig Latin              (C)
 - [x] Learning Even Odds with Strings and Loops   (C)
-- [x] Symmetric Matrix                            (C, Rust)
 
 - Hard (42/42)
-- [x] Magic ChessBoard                            (C)
-- [x] Love for Mathematics                        (C)
+- [x] Alice and Dictionary                        (C, Rust)
+- [x] Magic ChessBoard                            (C, Rust)
+- [x] Love for Mathematics                        (C, Rust)
 - [x] CashBack                                    (C)
 - [x] Depleting Ammunition                        (C, Rust)
 - [x] Bourne's Supremacy                          (C)
@@ -206,4 +207,3 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] The Boring Sets                             (C)
 - [x] Fit Me In                                   (C)
 - [x] The Cool Numbers                            (C)
-- [x] Alice and Dictionary                        (C, Rust)

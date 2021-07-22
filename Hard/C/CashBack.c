@@ -1,25 +1,26 @@
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  long int N, C, X, M = 0, y = 0, i, lowest = 100000, highest = 1;
-  scanf("%li", &N);
-  for(i = 0; i < N; i++) {
-    scanf("%li %li", &C, &X);
-    M += C;
-    M -= X;
-    if(X < lowest)
-      lowest = X;
+	unsigned int N, Ci, lowest, highest;
+	unsigned long int M, Xi;
+	scanf("%u", &N);
+	scanf("%u %u", &highest, &lowest);
+	M = highest - lowest;
+	for(unsigned int i = 1; i < N; i++) {
+		scanf("%u %lu", &Ci, &Xi);
+		M += Ci - Xi;
+		if(Xi < lowest)
+			lowest = Xi;
 
-    if(C > highest)
-      highest = C;
+		if(Ci > highest)
+			highest = Ci;
 
-  }
-  if(M + lowest > highest)
-    printf("%li", M + lowest);
-  else
-    printf("%li", highest);
+	}
+	M += lowest;
+	if(M > highest)
+		printf("%lu", M);
+	else
+		printf("%lu", highest);
 
-  return 0;
+	return 0;
 }

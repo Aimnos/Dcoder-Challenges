@@ -168,7 +168,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Alice and Dictionary                        (C, Rust)
 - [x] Magic ChessBoard                            (C, Rust)
 - [x] Love for Mathematics                        (C, Rust)
-- [x] CashBack                                    (C)
+- [x] CashBack                                    (C, Rust)
 - [x] Depleting Ammunition                        (C, Rust)
 - [x] Bourne's Supremacy                          (C)
 - [x] Looking in the Mirror                       (C)

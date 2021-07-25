@@ -1,13 +1,10 @@
-use std::{
-    io::{self, BufRead},
-    iter::once,
-};
+use std::io::{self, BufRead};
 
 fn main() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
     let N: u32 = lines.next().unwrap().unwrap().trim().parse().unwrap();
-    let CiXi: Vec<_> = lines
+    let (C, X): (Vec<_>, Vec<_>) = lines
         .take(N as usize)
         .map(|line| {
             let line = line.unwrap();
@@ -17,16 +14,12 @@ fn main() {
                 values.next().unwrap().parse::<u32>().unwrap(),
             )
         })
-        .flat_map(|tup| once(tup.0).chain(once(tup.1)))
-        .collect();
-    let M = CiXi
-        .iter()
-        .step_by(2)
-        .fold(*CiXi.iter().skip(1).step_by(2).min().unwrap(), |acc, ci| {
-            acc + ci
-        }) as u64
-        - CiXi.iter().skip(1).step_by(2).fold(0, |acc, xi| acc + xi) as u64;
-    let highest = *CiXi.iter().step_by(2).max().unwrap();
+        .unzip();
+    let highest = *C.iter().max().unwrap();
+    let M = C
+        .into_iter()
+        .fold(*X.iter().min().unwrap(), |acc, ci| acc + ci) as u64
+        - X.into_iter().fold(0, |acc, xi| acc + xi) as u64;
     if M > highest as u64 {
         print!("{}", M);
     } else {

@@ -28,7 +28,7 @@ int main() {
 				a1 /= (double)j;
 				a2 /= (double)N - (double)j;
 				difference = fabs(a1 - a2);
-				if((difference < smallest) || (difference == -1))
+				if((difference < smallest) || (smallest == -1))
 					smallest = difference;
 
 			}

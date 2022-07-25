@@ -2,7 +2,7 @@
 My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
 ## List of available solutions (200/200)
-- Easy (86/87)
+- Easy (87/87)
 - [X] Bitwise for Dummies                           (Rust)
 - [X] Double the Number                             (Rust)
 - [x] Rotate Array                                  (C, Rust)

@@ -1,7 +1,7 @@
 # Dcoder-Challenges
 My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask questions, suggest modifications or present your own solutions.
 
-## List of available solutions (200/200)
+## List of available solutions (204/204)
 - Easy (87/87)
 - [X] Bitwise for Dummies                           (Rust)
 - [X] Double the Number                             (Rust)

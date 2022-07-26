@@ -1,19 +1,17 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char N;
+    uint8_t N;
     // TestCase#2 has a word with 8 characters
     char word[9];
-    scanf("%hhu", &N);
-    for(unsigned char i = 0; i < N; i++) {
+    scanf("%" SCNu8, &N);
+    for(uint8_t i = 0; i < N; ++i) {
         scanf(" %s", word);
-        unsigned char j = 0;
-        while(word[j] != 0) {
-            if(word[j] >= '0' && word[j] <= '9')
+        for(uint8_t j = 0; word[j] != 0; ++j)
+            if(isdigit(word[j]))
                 printf("%c ", word[j]);
-
-            j++;
-        }
     }
     return 0;
 }

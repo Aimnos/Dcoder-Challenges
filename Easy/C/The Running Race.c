@@ -1,8 +1,9 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char D, X, Y;
-    scanf("%hhu %hhu %hhu", &D, &X, &Y);
+    uint8_t D, X, Y;
+    scanf("%" SCNu8 " %" SCNu8 " %" SCNu8, &D, &X, &Y);
     if(X == Y)
         printf("Draw");
     else if(X > Y)

@@ -1,8 +1,9 @@
+#include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    unsigned char binary[8], *ptr;
+    char binary[8], *ptr;
     scanf("%s", binary);
-    printf("%hhu", strtol(binary, &ptr, 2));
-    return 0;
+    printf("%" PRIu8, strtol(binary, &ptr, 2));
 }

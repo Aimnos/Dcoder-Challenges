@@ -1,14 +1,14 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    unsigned char N;
-    scanf("%hhu", &N);
-    char *string = (char *) malloc((N + 1) * sizeof(char));
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    char* string = (char*) malloc((N + 1) * sizeof(char));
     scanf("%s", string);
-    for(unsigned char i = 0; i < N; i++)
-        for(unsigned char j = 0; j < 3; j++)
-            printf("%c", string[i]);
+    for(uint8_t i = 0; i < N; ++i)
+        printf("%c%c%c", string[i], string[i], string[i]);
 
     free(string);
     return 0;

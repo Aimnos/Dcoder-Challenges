@@ -1,9 +1,10 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
 
 int main() {
-    unsigned char A[6], B[11];
+    char A[6], B[11];
     scanf("%s %s", A, B);
-    printf("%hhu", strstr(A, B) != NULL);
+    printf("%" PRIu8, strstr(A, B) != NULL);
     return 0;
 }

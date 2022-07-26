@@ -1,13 +1,11 @@
+#include <inttypes.h>
 #include <math.h>
 #include <stdio.h>
 
 int main() {
-    signed int integer;
-    scanf("%d", &integer);
-    if((signed int) sqrtf(abs(integer)) * sqrtf(abs(integer)) == integer)
-        printf("YES");
-    else
-        printf("NO");
-
+    int64_t integer;
+    scanf("%" SCNi64, &integer);
+    int64_t root = sqrt(integer);
+    printf("%s", root * root == integer ? "YES" : "NO");
     return 0;
 }

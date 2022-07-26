@@ -1,27 +1,28 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short maxW, value1, weight1, value2, weight2;
-    scanf("%hu\n%hu %hu\n%hu %hu", &maxW, &value1, &weight1, &value2, &weight2);
+    uint16_t maxW, value1, weight1, value2, weight2;
+    scanf("%" SCNu16 "\n%" SCNu16 " %" SCNu16 "\n%" SCNu16 " %" SCNu16, &maxW, &value1, &weight1, &value2, &weight2);
     if(maxW < weight1 + weight2) {
         if(maxW < weight1) {
             if(maxW < weight2)
                 printf("0");
             else
-                printf("%hu", value2);
+                printf("%" PRIu16, value2);
 
         } else {
             if(value1 < value2) {
                 if(maxW < weight2)
-                    printf("%hu", value1);
+                    printf("%" PRIu16, value1);
                 else
-                    printf("%hu", value2);
+                    printf("%" PRIu16, value2);
 
             } else
-                printf("%hu", value1);
+                printf("%" PRIu16, value1);
         }
     } else
-        printf("%hu", value1 + value2);
+        printf("%" PRIu16, value1 + value2);
 
     return 0;
 }

@@ -1,14 +1,13 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char T, Mathematics, Algorithms;
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
-        scanf("%hhu %hhu", &Mathematics, &Algorithms);
-        if(Mathematics > 70 && Algorithms > 50)
-            printf("Pass\n");
-        else
-            printf("Fail\n");
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
+        uint8_t Mathematics, Algorithms;
+        scanf("%" SCNu8 " %" SCNu8, &Mathematics, &Algorithms);
+        printf("%s\n", Mathematics > 70 && Algorithms > 50 ? "Pass" : "Fail");
     }
     return 0;
 }

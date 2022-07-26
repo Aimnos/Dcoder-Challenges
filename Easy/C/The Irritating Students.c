@@ -1,13 +1,14 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char T;
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
-        unsigned short n;
-        scanf("%hu", &n);
-        unsigned short A = n / 2;
-        printf("%hu %hu\n", A, n - A);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
+        uint16_t n;
+        scanf("%" SCNu16, &n);
+        uint16_t A = n / 2;
+        printf("%" PRIu16 " %" PRIu16 "\n", A, n - A);
     }
     return 0;
 }

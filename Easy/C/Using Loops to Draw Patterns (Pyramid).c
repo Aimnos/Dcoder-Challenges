@@ -1,11 +1,12 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    for(unsigned char i = 0; i < 5; i++) {
-        for(unsigned j = i; j < 4; j++)
+    for(uint8_t i = 0; i < 5; ++i) {
+        for(uint8_t j = i; j < 4; ++j)
             printf(" ");
 
-        for(unsigned char j = 0; j < i; j++)
+        for(uint8_t j = 0; j < i; ++j)
             printf("**");
 
         printf("*\n");

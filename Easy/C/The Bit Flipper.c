@@ -1,10 +1,13 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char binary[33];
-    scanf("%s", binary);
-    for(unsigned char i = 0; binary[i] != 0; i++)
-        printf("%hhu", (binary[i] - '0') ^ 1);
-
+    char bit;
+    scanf("%c", &bit);
+    while(!isspace(bit)) {
+        printf("%" PRIu8, (bit - '0') ^ 1);
+        scanf("%c", &bit);
+    }
     return 0;
 }

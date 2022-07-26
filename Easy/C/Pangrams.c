@@ -1,24 +1,17 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char count = 0;
+    uint8_t count = 0, letters[26] = {0};
     char S[101];
-    bool letters[26];
-    for(unsigned char i = 0; i < 26; i++)
-        letters[i] = true;
-
     scanf(" %s", S);
-    unsigned char i = 0;
-    while(S[i] != 0) {
-        S[i] += 32 * (S[i] >= 'A' && S[i] <= 'Z');
-        count += letters[S[i] - 'a'];
-        letters[S[i++] - 'a'] = false;
+    for(uint8_t i = 0; S[i] != 0; ++i) {
+        uint8_t j = tolower(S[i]) - 'a';
+        count += 1 - letters[j];
+        letters[j] = 1;
     }
-    if(count == 26)
-        printf("YES");
-    else
-        printf("NO");
-
+    printf("%s", count == 26 ? "YES" : "NO");
     return 0;
 }

@@ -1,20 +1,18 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short l, h, d;
-    scanf("%hu %hu %hu", &l, &h, &d);
-    unsigned short divisors = 0;
-    unsigned short number = l;
-    while(number <= h) {
-        if(number % d == 0)
-            break;
+    uint16_t l, h, d;
+    scanf("%" SCNu16 "%" SCNu16 "%" SCNu16, &l, &h, &d);
+    uint16_t divisors = 0;
+    uint16_t number = l;
+    while(number <= h && number % d != 0)
+        ++number;
 
-        number++;
-    }
     while(number <= h) {
-        divisors++;
+        ++divisors;
         number += d;
     }
-    printf("%hu", divisors);
+    printf("%" PRIu16, divisors);
     return 0;
 }

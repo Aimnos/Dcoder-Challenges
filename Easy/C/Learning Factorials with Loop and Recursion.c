@@ -1,16 +1,17 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char n;
-    scanf("%hhu", &n);
+    uint8_t n;
+    scanf("%" SCNu8, &n);
     if(n == 0 || n == 1)
         printf("1");
     else {
-        unsigned int factorial = 1;
-        for(unsigned char x = 2; x <= n; x++)
+        uint32_t factorial = 1;
+        for(uint8_t x = 2; x <= n; ++x)
             factorial *= x;
 
-        printf("%u", factorial);
+        printf("%" PRIu32, factorial);
     }
     return 0;
 }

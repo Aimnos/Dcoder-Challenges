@@ -1,12 +1,12 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short n;
-    scanf("%hhu", &n);
+    uint8_t n;
+    scanf("%" SCNu8, &n);
     printf("Dc");
-    for(unsigned char i = 0; i < n; i++)
+    for(uint8_t i = 0; i < n; ++i)
         printf("o");
 
     printf("der");
-    return 0;
 }

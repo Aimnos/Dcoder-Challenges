@@ -1,8 +1,8 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char N, X;
-    scanf("%hhu %hhu", &N, &X);
-    printf("%hhu", (N / 2 + X) % N);
-    return 0;
+    uint8_t N, X;
+    scanf("%" SCNu8 " %" SCNu8, &N, &X);
+    printf("%" PRIu8, (N / 2 + X) % N);
 }

@@ -1,13 +1,14 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short A, M, N, D;
-    scanf("%hu %hu %hu %hu", &A, &M, &N, &D);
+    uint16_t A, M, N, D;
+    scanf("%" SCNu16 " %" SCNu16 " %" SCNu16 " %" SCNu16, &A, &M, &N, &D);
     if(D > A)
-        printf("%u", M + (D - A) * N);
+        printf("%" PRIu32, (uint32_t) M + (D - A) * N);
     // uncomment for TestCase#1
     // else if(A != 1)
     //     printf("4");
     else
-        printf("%hu", M);
+        printf("%" PRIu16, M);
 }

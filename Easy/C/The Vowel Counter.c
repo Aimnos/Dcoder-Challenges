@@ -1,10 +1,12 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char string[1001];
-    scanf("%[^\n]", string);
-    unsigned short vowels = 0;
-    for(unsigned char i = 0; string[i] != 0; i++) {
+    char string[1001];
+    fgets(string, 1001, stdin);
+    uint16_t vowels = 0;
+    for(uint16_t i = 0; string[i] != 0; ++i) {
         switch(string[i]) {
             case 'A':
             case 'E':
@@ -16,10 +18,10 @@ int main() {
             case 'i':
             case 'o':
             case 'u':
-                vowels++;
+                ++vowels;
                 break;
         }
     }
-    printf("%hu", vowels);
+    printf("%" PRIu16, vowels);
     return 0;
 }

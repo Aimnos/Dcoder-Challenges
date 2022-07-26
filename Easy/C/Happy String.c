@@ -1,10 +1,11 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char N;
-    scanf("%hhu", &N);
-    for(unsigned char i = N; i > 0; i--)
-        printf("%c", i + 96);
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    for(char c = 'a' - 1 + N; c >= 'a'; --c)
+        printf("%c", c);
 
     return 0;
 }

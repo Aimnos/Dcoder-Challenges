@@ -1,15 +1,18 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    unsigned char N;
-    scanf("%hhu", &N);
-    unsigned short *A = (unsigned short *) malloc(N * sizeof(short));
-    for(unsigned char i = 0; i < N; i++)
-        scanf("%hu", &A[i]);
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    uint16_t* A = (uint16_t*) malloc(N * sizeof(uint16_t));
+    uint8_t i = 0;
+    while(i < N)
+        scanf("%" SCNu16, &A[i++]);
 
-    for(unsigned char i = N; i > 0; i--)
-        printf("%hu ", A[i - 1]);
+    printf("%" PRIu16, A[--i]);
+    while(i > 0)
+        printf(" %" PRIu16, A[--i]);
 
     free(A);
     return 0;

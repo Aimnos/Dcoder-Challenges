@@ -1,10 +1,11 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char N, element;
-    scanf("%hhu", &N);
-    for(unsigned char i = 0; i < N; i++) {
-        scanf("%hhu", &element);
+    uint8_t N, element;
+    scanf("%" SCNu8, &N);
+    for(uint8_t i = 0; i < N; ++i) {
+        scanf("%" SCNu8, &element);
         if(element == 0) {
             printf("No");
             return 0;

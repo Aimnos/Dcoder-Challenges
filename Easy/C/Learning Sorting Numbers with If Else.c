@@ -1,25 +1,26 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short m, n, p;
-    scanf("%hu %hu %hu", &m, &n, &p);
+    uint16_t m, n, p;
+    scanf("%" SCNu16 " %" SCNu16 " %" SCNu16, &m, &n, &p);
     if(m < n) {
         if(n < p)
-            printf("%hu %hu %hu", m, n, p);
+            printf("%" PRIu16 " %" PRIu16 " %" PRIu16, m, n, p);
         else {
             if(m < p)
-                printf("%hu %hu %hu", m, p, n);
+                printf("%" PRIu16 " %" PRIu16 " %" PRIu16, m, p, n);
             else
-                printf("%hu %hu %hu", p, m, n);
+                printf("%" PRIu16 " %" PRIu16 " %" PRIu16, p, m, n);
         }
     } else {
         if(m < p)
-            printf("%hu %hu %hu", n, m, p);
+            printf("%" PRIu16 " %" PRIu16 " %" PRIu16, n, m, p);
         else {
             if(n < p)
-                printf("%hu %hu %hu", n, p, m);
+                printf("%" PRIu16 " %" PRIu16 " %" PRIu16, n, p, m);
             else
-                printf("%hu %hu %hu", p, n, m);
+                printf("%" PRIu16 " %" PRIu16 " %" PRIu16, p, n, m);
         }
     }
     return 0;

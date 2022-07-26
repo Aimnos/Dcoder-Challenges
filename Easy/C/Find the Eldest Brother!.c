@@ -1,12 +1,13 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char age, eldest = 0;
-    for(unsigned char i = 0; i < 5; i++) {
-        scanf("%hhu", &age);
+    uint8_t age, eldest = 0;
+    for(uint8_t i = 0; i < 5; ++i) {
+        scanf("%" SCNu8, &age);
         if(age > eldest)
             eldest = age;
     }
-    printf("%hhu", eldest);
+    printf("%" PRIu8, eldest);
     return 0;
 }

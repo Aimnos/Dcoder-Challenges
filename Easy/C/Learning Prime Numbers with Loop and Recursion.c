@@ -1,18 +1,20 @@
+#include <inttypes.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    unsigned int m, n;
-    scanf("%u %u", &m, &n);
-    bool *primes = (bool *) calloc(n, sizeof(bool));
-    for(unsigned int x = 2; x <= n; x++) {
-        if(!primes[x] && x >= m)
-            printf("%u\n", x);
+    uint32_t m, n;
+    scanf("%" SCNu32 " %" SCNu32, &m, &n);
+    bool* composites = (bool*) calloc(n - m + 1, sizeof(bool));
+    for(uint32_t x = 2; x <= n; ++x) {
+        if(x >= m)
+            if(!composites[x - m])
+                printf("%" PRIu32 "\n", x);
 
-        for(unsigned int i = 2; i <= n / x; i++)
-            primes[x * i] = true;
+        for(uint32_t i = (x - m % x) % x; i <= n - m; i += x)
+            composites[i] = true;
     }
-    free(primes);
+    free(composites);
     return 0;
 }

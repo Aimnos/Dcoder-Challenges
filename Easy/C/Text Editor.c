@@ -1,16 +1,17 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char T;
+    uint8_t T;
     char s[101];
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
         scanf(" %[^\n]", s);
-        unsigned char j = 0;
-        while(s[j] != 0)
-            s[j++] -= 32;
+        for(uint8_t j = 0; s[j] != 0; ++j)
+            printf("%c", toupper(s[j]));
 
-        printf("%s\n", s);
+        printf("\n");
     }
     return 0;
 }

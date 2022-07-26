@@ -1,16 +1,16 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short N, D, x, y;
-    scanf("%hu %hu", &N, &D);
-    x = D;
-    y = N;
+    uint16_t N, D;
+    scanf("%" SCNu16 " %" SCNu16, &N, &D);
+    uint16_t x = D;
+    uint16_t y = N;
     while(y > 0) {
         x %= y;
         y ^= x;
         x ^= y;
         y ^= x;
     }
-    printf("%hu %hu", N / x, D / x);
-    return 0;
+    printf("%" PRIu16 " %" PRIu16, N / x, D / x);
 }

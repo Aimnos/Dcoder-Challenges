@@ -1,15 +1,16 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char n[6];
+    char n[6];
     scanf("%s", n);
-    unsigned char i = 0;
+    uint8_t i = 0;
     while(i < 6) {
         if(n[i] == '0' || n[i] == 0) {
-            i--;
+            --i;
             break;
         }
-        i++;
+        ++i;
     }
     while(i > 0)
         printf("%c", n[i--]);

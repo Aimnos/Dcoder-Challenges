@@ -1,13 +1,14 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char s[101];
-    scanf("%[^\n]", s);
+    char s[101];
+    fgets(s, 101, stdin);
     bool capitalize = true;
-    for(unsigned char i = 0; s[i] != 0; i++) {
-        printf("%c", s[i] - 32 * (capitalize && s[i] > 96));
-        capitalize = s[i] == ' ';
+    for(uint8_t i = 0; s[i] != '\n'; ++i) {
+        printf("%c", capitalize ? toupper(s[i]) : s[i]);
+        capitalize = isspace(s[i]);
     }
-    return 0;
 }

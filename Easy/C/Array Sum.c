@@ -1,16 +1,17 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char n;
-    unsigned short A, biggest = 0;
-    unsigned long sum = 0;
-    scanf("%hhu", &n);
-    for(unsigned char i = 0; i < n; i++) {
-        scanf("%hu", &A);
+    uint8_t n;
+    uint16_t biggest = 0;
+    uint32_t sum = 0;
+    scanf("%" SCNu8, &n);
+    for(uint8_t i = 0; i < n; ++i) {
+        uint16_t A;
+        scanf("%" SCNu16, &A);
         sum += A;
         if(A > biggest)
             biggest = A;
     }
-    printf("%hu", sum % biggest);
-    return 0;
+    printf("%" PRIu16, sum % biggest);
 }

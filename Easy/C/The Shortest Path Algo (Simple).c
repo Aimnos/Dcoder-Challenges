@@ -1,12 +1,9 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    signed char aX, aY, bX, bY;
-    scanf("%hhd %hhd %hhd %hhd", &aX, &aY, &bX, &bY);
-    if(aX * aX + aY * aY < bX * bX + bY * bY)
-        printf("A");
-    else
-        printf("B");
-
+    int8_t aX, aY, bX, bY;
+    scanf("%" SCNi8 " %" SCNi8 " %" SCNi8 " %" SCNi8, &aX, &aY, &bX, &bY);
+    printf("%c", aX * aX + aY * aY < bX * bX + bY * bY ? 'A' : 'B');
     return 0;
 }

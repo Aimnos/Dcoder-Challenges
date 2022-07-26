@@ -1,13 +1,13 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short N;
-    unsigned int element;
-    scanf("%hu", &N);
-    for(unsigned short i = 0; i < N; i++) {
-        scanf("%u", &element);
+    uint16_t N;
+    scanf("%" SCNu16, &N);
+    for(uint16_t i = 0; i < N; ++i) {
+        uint32_t element;
+        scanf("%" SCNu32, &element);
         if(element % 2 == 0 && i % 2 == 1)
-            printf("%u ", element);
+            printf("%" PRIu32 " ", element);
     }
-    return 0;
 }

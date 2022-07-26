@@ -1,18 +1,19 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short N;
-    // Even though the problem states that the maximum value for any element is 10000, using unsigned short fails for TestCase#1 and TestCase#2
-    unsigned int element, biggest = 0, smallest = -1;
+    uint16_t N;
+    // Even though the problem states that the maximum value for any element is 10000, using uint16_t fails for TestCase#1 and TestCase#2
+    uint32_t element, biggest = 0, smallest = UINT32_MAX;
     scanf("%hu", &N);
-    for(unsigned short i = 0; i < N; i++) {
-        scanf("%u", &element);
+    for(uint16_t i = 0; i < N; ++i) {
+        scanf("%" SCNu32, &element);
         if(element > biggest)
             biggest = element;
 
         if(element < smallest)
             smallest = element;
     }
-    printf("%u", biggest - smallest);
+    printf("%" PRIu32, biggest - smallest);
     return 0;
 }

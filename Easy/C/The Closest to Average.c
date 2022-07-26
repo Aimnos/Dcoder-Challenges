@@ -1,15 +1,17 @@
+#include <inttypes.h>
+#include <math.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char n;
+    uint8_t n;
     float average = 0.0;
-    scanf("%hhu", &n);
-    for(unsigned char i = 0; i < n; i++) {
-        unsigned short element;
-        scanf("%hu", &element);
-        average += element;
+    scanf("%" SCNu8, &n);
+    for(uint8_t i = 0; i < n; ++i) {
+        uint16_t elem;
+        scanf("%" SCNu16, &elem);
+        average += elem;
     }
     average /= (float) n;
-    printf("%hu", (unsigned short) average + (2 * average <= 2 * (unsigned short) average + 1));
+    printf("%" PRIu16, average - floor(average) <= 0.5 ? (uint16_t) floor(average) : (uint16_t) ceil(average));
     return 0;
 }

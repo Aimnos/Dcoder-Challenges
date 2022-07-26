@@ -1,16 +1,14 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
 
 int main() {
-    unsigned char T;
+    uint8_t T;
     char N[101], F[101];
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
         scanf("%s %s", N, F);
-        if(strstr(N, F) != NULL)
-            printf("Yes\n");
-        else
-            printf("No\n");
+        printf("%s\n", strstr(N, F) != NULL ? "Yes" : "No");
     }
     return 0;
 }

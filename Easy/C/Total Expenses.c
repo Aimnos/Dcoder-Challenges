@@ -1,15 +1,16 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char T;
-    unsigned int total_cost;
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
-        scanf("%u", &total_cost);
+    uint8_t T;
+    uint32_t total_cost;
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
+        scanf("%" SCNu32, &total_cost);
         if(total_cost > 1000)
-            printf("%.2f\n", (double) total_cost * 0.9);
+            printf("%.2lf\n", (double) total_cost * 0.9);
         else
-            printf("%u.00\n", total_cost);
+            printf("%" PRIu32 ".00\n", total_cost);
     }
     return 0;
 }

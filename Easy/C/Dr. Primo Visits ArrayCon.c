@@ -1,33 +1,33 @@
+#include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short N, count = 0;
-    unsigned int A;
-    scanf("%hu", &N);
-    for(unsigned short i = 0; i < N; i++) {
-        scanf("%u", &A);
-        switch(A) {
-            case 2:
-            case 3:
-                count++;
-            case 0:
+    uint16_t N, count = 0;
+    scanf("%" SCNu16, &N);
+    for(uint16_t i = 0; i < N; ++i) {
+        uint32_t A;
+        scanf("%" SCNu32, &A);
+        switch(A % 6) {
             case 1:
-                break;
-            default:
-                if(A % 2 == 0 || A % 2 == 0)
+                if(A == 1)
                     break;
 
-                unsigned int j = 5;
-                while(j * j <= A) {
-                    if(A % j == 0 || A % (j + 2) == 0)
+            case 5:
+                for(uint32_t j = 5; j * j <= A; j += 6)
+                    if(A % j == 0 || A % (j + 2) == 0) {
+                        --count;
                         break;
-                    else
-                        j += 5;
-                }
-                count++;
+                    }
+
+                ++count;
+                break;
+            default:
+                if(A == 2 || A == 3)
+                    ++count;
+
                 break;
         }
     }
-    printf("%hu", count);
-    return 0;
+    printf("%" PRIu16, count);
 }

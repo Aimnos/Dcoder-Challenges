@@ -1,10 +1,11 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned short n;
-    scanf("%hu", &n);
-    for(unsigned char i = 1; i <= 10; i++)
-        printf("%u\n", n * i);
+    uint16_t n;
+    scanf("%" SCNu16, &n);
+    for(uint8_t i = 1; i <= 10; ++i)
+        printf("%" PRIu32 "\n", n * i);
 
     return 0;
 }

@@ -1,20 +1,22 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char N;
-    scanf("%hhu", &N);
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    printf("%" PRIu8, N);
     switch(N) {
         case 1:
-            printf("1st");
+            printf("st");
             break;
         case 2:
-            printf("2nd");
+            printf("nd");
             break;
         case 3:
-            printf("3rd");
+            printf("rd");
             break;
         default:
-            printf("%hhuth", N);
+            printf("th");
             break;
     }
     return 0;

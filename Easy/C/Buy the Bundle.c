@@ -1,15 +1,13 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char T, N;
-    unsigned int M;
-    scanf("%hhu", &T);
-    for(unsigned char i = 0; i < T; i++) {
-        scanf("%hhu %u", &N, &M);
-        if(M % N == 0)
-            printf("Yes\n");
-        else
-            printf("No\n");
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for(uint8_t i = 0; i < T; ++i) {
+        uint8_t N;
+        uint32_t M;
+        scanf("%" SCNu8 " %" SCNu32, &N, &M);
+        printf("%s\n", M % N == 0 ? "Yes" : "No");
     }
-    return 0;
 }

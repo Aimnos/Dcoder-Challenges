@@ -1,12 +1,9 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned char a, b;
-    scanf("%hhu %hhu", &a, &b);
-    if(a + b == 6 || abs(a - b) == 6)
-        printf("Love");
-    else
-        printf("Hate");
-
+    uint8_t a, b;
+    scanf("%" SCNu8 " %" SCNu8, &a, &b);
+    printf("%s", a + b == 6 || a - b == 6 || b - a == 6 ? "Love" : "Hate");
     return 0;
 }

@@ -1,18 +1,19 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-    unsigned char N;
-    scanf("%hhu", &N);
-    char *string = (char *) malloc(N * sizeof(char));
-    for(unsigned char i = 0; i < N; i++)
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    char* string = (char*) malloc(N * sizeof(char));
+    for(uint8_t i = 0; i < N; ++i)
         scanf(" %c", &string[i]);
 
-    unsigned char smallest_pos;
-    for(unsigned char i = N; i > 1; i--) {
-        smallest_pos = 0;
-        for(unsigned char j = 1; j < i; j++)
-            if(string[j] + 32 * (string[j] >= 'A' && string[j] <= 'Z') < string[smallest_pos] + 32 * (string[smallest_pos] >= 'A' && string[smallest_pos] <= 'Z'))
+    for(uint8_t i = N; i > 1; --i) {
+        uint8_t smallest_pos = 0;
+        for(uint8_t j = 1; j < i; ++j)
+            if(tolower(string[j]) < tolower(string[smallest_pos]))
                 smallest_pos = j;
 
         printf("%c ", string[smallest_pos]);

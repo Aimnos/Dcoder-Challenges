@@ -1,14 +1,15 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
 
 int main() {
-    unsigned char N;
-    char word[50];
-    scanf("%hhu", &N);
-    for(unsigned char i = 0; i < N; i++) {
+    uint16_t N;
+    char word[51];
+    scanf("%" SCNu16, &N);
+    for(uint16_t i = 0; i < N; ++i) {
         scanf("%s", word);
         if(strcmp(word, "Nemo") == 0) {
-            printf("%hhu", i + 1);
+            printf("%" PRIu16, i + 1);
             return 0;
         }
     }

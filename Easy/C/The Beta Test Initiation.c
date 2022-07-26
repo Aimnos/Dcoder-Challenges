@@ -3,10 +3,6 @@
 int main() {
     float V, X;
     scanf("%f %f", &V, &X);
-    if(X < V)
-        printf("No");
-    else
-        printf("Yes");
-
+    printf("%s", X >= V ? "Yes" : "No");
     return 0;
 }

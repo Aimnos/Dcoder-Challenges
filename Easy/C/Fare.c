@@ -5,7 +5,7 @@ int main() {
     uint16_t A, M, N, D;
     scanf("%" SCNu16 " %" SCNu16 " %" SCNu16 " %" SCNu16, &A, &M, &N, &D);
     if(D > A)
-        printf("%" PRIu32, (uint32_t) M + (D - A) * N);
+        printf("%" PRIu32, M + (D - A) * N);
     // uncomment for TestCase#1
     // else if(A != 1)
     //     printf("4");

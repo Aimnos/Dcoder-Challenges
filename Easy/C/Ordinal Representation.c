@@ -19,5 +19,4 @@ int main() {
             printf("th");
             break;
     }
-    return 0;
 }

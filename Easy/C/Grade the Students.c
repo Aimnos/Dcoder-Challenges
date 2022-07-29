@@ -9,5 +9,4 @@ int main() {
         scanf("%" SCNu8 " %" SCNu8, &Mathematics, &Algorithms);
         printf("%s\n", Mathematics > 70 && Algorithms > 50 ? "Pass" : "Fail");
     }
-    return 0;
 }

@@ -7,6 +7,4 @@ int main() {
         printf("%.2f", 3.14 * r * r);
     else
         printf("0");
-
-    return 0;
 }

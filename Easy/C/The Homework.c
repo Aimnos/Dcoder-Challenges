@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 int main() {
-    uint8_t T, K;
+    uint8_t T;
     scanf("%" SCNu8, &T);
     for(uint8_t i = 0; i < T; ++i) {
+        uint8_t K;
         scanf("%" SCNu8, &K);
-        uint8_t* digits = (uint8_t*) malloc(K * sizeof(uint8_t));
+        uint8_t* const digits = malloc(K * sizeof(uint8_t));
         uint8_t biggest_pos = 0;
         for(uint8_t j = 0; j < K; ++j) {
             scanf("%" SCNu8, &digits[j]);
@@ -28,5 +29,4 @@ int main() {
         printf("\n");
         free(digits);
     }
-    return 0;
 }

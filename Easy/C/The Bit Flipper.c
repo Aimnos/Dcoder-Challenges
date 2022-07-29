@@ -9,5 +9,4 @@ int main() {
         printf("%" PRIu8, (bit - '0') ^ 1);
         scanf("%c", &bit);
     }
-    return 0;
 }

@@ -3,13 +3,10 @@
 #include <stdio.h>
 
 int main() {
-    char string[16];
-    scanf("%s", string);
-    for(uint8_t i = 0; string[i] != 0; ++i) {
-        if(isalpha(string[i]))
-            printf("%c", isupper(string[i]) ? tolower(string[i]) : toupper(string[i]));
+    for(char ch = getchar(); !iscntrl(ch); ch = getchar()) {
+        if(isalpha(ch))
+            printf("%c", isupper(ch) ? tolower(ch) : toupper(ch));
         else
-            printf("%c", string[i]);
+            printf("%c", ch);
     }
-    return 0;
 }

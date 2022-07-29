@@ -6,6 +6,4 @@ int main() {
     scanf("%" SCNu16, &n);
     for(uint8_t i = 1; i <= 10; ++i)
         printf("%" PRIu32 "\n", n * i);
-
-    return 0;
 }

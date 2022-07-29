@@ -11,5 +11,4 @@ int main() {
             printf("0");
     } else
         printf("%" PRIu8, a + b);
-    return 0;
 }

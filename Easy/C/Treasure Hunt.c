@@ -23,6 +23,4 @@ int main() {
         }
     } else
         printf("%" PRIu16, value1 + value2);
-
-    return 0;
 }

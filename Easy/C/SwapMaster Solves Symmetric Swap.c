@@ -5,7 +5,7 @@
 int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
-    uint16_t* A = (uint16_t*) malloc(N * sizeof(uint16_t));
+    uint16_t* const A = malloc(N * sizeof(uint16_t));
     uint8_t i = 0;
     while(i < N)
         scanf("%" SCNu16, &A[i++]);
@@ -15,5 +15,4 @@ int main() {
         printf(" %" PRIu16, A[--i]);
 
     free(A);
-    return 0;
 }

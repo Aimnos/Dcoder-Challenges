@@ -6,10 +6,9 @@ int main() {
     int8_t list[10];
     uint8_t i = 0;
     do
-        scanf("%" SCNi8, &list[i]);
+        scanf("%" SCNd8, &list[i]);
     while(list[i++] != -1);
-    i -= 2;
-    printf("%" PRIi8, list[i]);
+    --i;
     while(i > 0)
-        printf(" %" PRIi8, list[--i]);
+        printf("%" PRId8 " ", list[--i]);
 }

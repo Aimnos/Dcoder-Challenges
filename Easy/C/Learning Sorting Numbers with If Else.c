@@ -23,5 +23,4 @@ int main() {
                 printf("%" PRIu16 " %" PRIu16 " %" PRIu16, p, n, m);
         }
     }
-    return 0;
 }

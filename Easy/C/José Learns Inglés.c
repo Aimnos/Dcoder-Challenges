@@ -6,7 +6,7 @@
 int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
-    char* string = (char*) malloc(N * sizeof(char));
+    char* const string = malloc(N * sizeof(char));
     for(uint8_t i = 0; i < N; ++i)
         scanf(" %c", &string[i]);
 
@@ -21,5 +21,4 @@ int main() {
     }
     printf("%c", string[0]);
     free(string);
-    return 0;
 }

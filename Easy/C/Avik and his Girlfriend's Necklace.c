@@ -5,7 +5,7 @@
 int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
-    uint8_t* necklace = (uint8_t*) malloc(N * sizeof(uint8_t));
+    uint8_t* const necklace = malloc(N * sizeof(uint8_t));
     uint8_t smallest_pos = 0;
     for(uint8_t i = 0; i < N; ++i) {
         scanf("%" SCNu8, &necklace[i]);

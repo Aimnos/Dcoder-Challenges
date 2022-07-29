@@ -10,6 +10,4 @@ int main() {
         printf("Alex");
     else
         printf("Ryan");
-
-    return 0;
 }

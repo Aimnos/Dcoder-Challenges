@@ -9,5 +9,4 @@ int main() {
         scanf("%lf", &N);
         printf("%.2lf\n", N);
     }
-    return 0;
 }

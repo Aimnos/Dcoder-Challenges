@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 int main() {
-    uint8_t n, Dcoder, You;
+    uint8_t n;
     scanf("%" SCNu8, &n);
     for(uint8_t i = 0; i < n; ++i) {
+        char Dcoder, You;
         scanf(" %c%c", &Dcoder, &You);
         if(Dcoder == You)
             printf("Draw\n");
@@ -13,5 +14,4 @@ int main() {
         else
             printf("Dcoder\n");
     }
-    return 0;
 }

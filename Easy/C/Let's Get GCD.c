@@ -16,5 +16,4 @@ int main() {
         n1 ^= n2;
     }
     printf("%" PRIu16, n1);
-    return 0;
 }

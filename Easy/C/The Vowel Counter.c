@@ -3,11 +3,9 @@
 #include <stdio.h>
 
 int main() {
-    char string[1001];
-    fgets(string, 1001, stdin);
     uint16_t vowels = 0;
-    for(uint16_t i = 0; string[i] != 0; ++i) {
-        switch(string[i]) {
+    for(char ch = getchar(); !iscntrl(ch); ch = getchar()) {
+        switch(ch) {
             case 'A':
             case 'E':
             case 'I':
@@ -23,5 +21,4 @@ int main() {
         }
     }
     printf("%" PRIu16, vowels);
-    return 0;
 }

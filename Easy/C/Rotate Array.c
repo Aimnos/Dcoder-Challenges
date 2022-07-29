@@ -5,14 +5,15 @@
 int main() {
     uint64_t N, K;
     scanf("%" SCNu64 " %" SCNu64, &N, &K);
-    uint64_t* Arr = (uint64_t*) malloc(N * sizeof(int64_t));
+    uint64_t* const Arr = malloc(N * sizeof(uint64_t));
     for(uint64_t i = 0; i < N; ++i)
         scanf("%" SCNu64, &Arr[i]);
 
-    printf("%" PRIu64, Arr[N - K]);
-    for(uint64_t i = 1; i < N; ++i)
-        printf(" %" PRIu64, Arr[(N - K + i) % N]);
+    for(uint64_t i = N - K; i < N; ++i)
+        printf("%" PRIu64 " ", Arr[i]);
+
+    for(uint64_t i = 0; i < N - K; ++i)
+        printf("%" PRIu64 " ", Arr[i]);
 
     free(Arr);
-    return 0;
 }

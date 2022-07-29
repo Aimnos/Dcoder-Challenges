@@ -6,8 +6,7 @@ int main() {
     scanf("%" SCNu8, &T);
     for(uint8_t i = 0; i < T; ++i) {
         uint32_t Year;
-        scanf("%" SCNu32, &Year);
+        scanf("%" SCNu16, &Year);
         printf("%s\n", Year % 400 == 0 || (Year % 4 == 0 && Year % 100 != 0) ? "Yes" : "No");
     }
-    return 0;
 }

@@ -1,23 +1,19 @@
+#include <ctype.h>
 #include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    char binary[15];
-    scanf("%s", binary);
-    uint16_t count = 0;
-    uint8_t digit = 0;
-    for(uint8_t i = 0; binary[i] != 0; ++i) {
-        if(binary[i] == digit)
-            ++count;
-        else {
-            digit = binary[i];
+    char prev = getchar();
+    uint16_t count = 1;
+    for(char ch = getchar(); isdigit(ch); ch = getchar()) {
+        if(ch != prev) {
+            prev = ch;
             count = 1;
-        }
-        if(count >= 6) {
+        } else if(++count >= 6) {
             printf("Bad");
-            return 0;
+            exit(EXIT_SUCCESS);
         }
     }
     printf("Good");
-    return 0;
 }

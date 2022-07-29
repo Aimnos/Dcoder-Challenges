@@ -4,8 +4,7 @@
 
 int main() {
     int64_t integer;
-    scanf("%" SCNi64, &integer);
-    int64_t root = sqrt(integer);
+    scanf("%" SCNd64, &integer);
+    const int64_t root = trunc(sqrt(integer));
     printf("%s", root * root == integer ? "YES" : "NO");
-    return 0;
 }

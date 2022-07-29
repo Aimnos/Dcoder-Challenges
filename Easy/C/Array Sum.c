@@ -3,9 +3,9 @@
 
 int main() {
     uint8_t n;
+    scanf("%" SCNu8, &n);
     uint16_t biggest = 0;
     uint32_t sum = 0;
-    scanf("%" SCNu8, &n);
     for(uint8_t i = 0; i < n; ++i) {
         uint16_t A;
         scanf("%" SCNu16, &A);

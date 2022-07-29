@@ -1,15 +1,17 @@
+#include <ctype.h>
 #include <inttypes.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
-    char* string = (char*) malloc((N + 1) * sizeof(char));
-    scanf("%s", string);
-    for(uint8_t i = 0; i < N; ++i)
-        printf("%c%c%c", string[i], string[i], string[i]);
-
-    free(string);
-    return 0;
+    char ch = getchar();
+    while(!isalnum(ch)) {
+        ch = getchar();
+    }
+    printf("%c%c%c", ch, ch, ch);
+    for(uint8_t i = 0; i < N; ++i) {
+        ch = getchar();
+        printf("%c%c%c", ch, ch, ch);
+    }
 }

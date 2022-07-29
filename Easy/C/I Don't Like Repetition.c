@@ -11,6 +11,4 @@ int main() {
             hash_set[w[i] - 'A'] = true;
             printf("%c", w[i]);
         }
-
-    return 0;
 }

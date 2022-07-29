@@ -1,16 +1,17 @@
 #include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    uint8_t N, element;
+    uint8_t N;
     scanf("%" SCNu8, &N);
     for(uint8_t i = 0; i < N; ++i) {
+        uint8_t element;
         scanf("%" SCNu8, &element);
         if(element == 0) {
             printf("No");
-            return 0;
+            exit(EXIT_SUCCESS);
         }
     }
     printf("Yes");
-    return 0;
 }

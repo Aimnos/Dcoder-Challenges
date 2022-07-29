@@ -3,11 +3,12 @@
 
 int main() {
     uint16_t N;
+    scanf("%" SCNu16, &N);
     // Even though the problem states that the maximum value for any element is 10000, using uint16_t fails for TestCase#1 and TestCase#2
-    uint32_t element, biggest = 0, smallest = UINT32_MAX;
-    scanf("%hu", &N);
+    uint32_t biggest = 0, smallest = UINT32_MAX;
     for(uint16_t i = 0; i < N; ++i) {
-        scanf("%" SCNu32, &element);
+        uint32_t element;
+        scanf("%" SCNu16, &element);
         if(element > biggest)
             biggest = element;
 
@@ -15,5 +16,4 @@ int main() {
             smallest = element;
     }
     printf("%" PRIu32, biggest - smallest);
-    return 0;
 }

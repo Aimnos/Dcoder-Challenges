@@ -6,6 +6,4 @@ int main() {
     scanf("%" SCNu8, &N);
     for(char c = 'a' - 1 + N; c >= 'a'; --c)
         printf("%c", c);
-
-    return 0;
 }

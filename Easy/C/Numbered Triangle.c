@@ -10,5 +10,4 @@ int main() {
 
         printf("%" PRIu8 "\n", i);
     }
-    return 0;
 }

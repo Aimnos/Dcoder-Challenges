@@ -13,5 +13,4 @@ int main() {
 
         printf("%" PRIu32, factorial);
     }
-    return 0;
 }

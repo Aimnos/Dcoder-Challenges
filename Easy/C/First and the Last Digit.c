@@ -13,5 +13,4 @@ int main() {
 
         printf("%" PRIu32 "\n", N + last);
     }
-    return 0;
 }

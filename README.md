@@ -3,8 +3,8 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 
 ## List of available solutions (204/204)
 - Easy (87/87)
-- [X] Bitwise for Dummies                           (Rust)
-- [X] Double the Number                             (Rust)
+- [X] Bitwise for Dummies                           (C, Rust)
+- [X] Double the Number                             (C, Rust)
 - [x] Rotate Array                                  (C, Rust)
 - [x] Floating Number                               (C, Rust)
 - [x] SwapMaster Solves Symmetric Swap              (C, Rust)
@@ -92,8 +92,8 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Print Hello World                             (C, Rust)
 
 - Medium (74/74)
-- [X] Wrestling Championship
-- [x] Symmetric Matrix                              (Rust)
+- [X] Wrestling Championship                        (C, Rust)
+- [x] Symmetric Matrix                              (C, Rust)
 - [x] Simple Multiple Problem                       (C, Rust)
 - [x] Word Frequency                                (C)
 - [x] Dcoder Admiration                             (C)
@@ -168,7 +168,7 @@ My solutions to Dcoder challenges, also known as Algo Yo. Feel free to ask quest
 - [x] Learning Even Odds with Strings and Loops     (C)
 
 - Hard (43/43)
-- [X] Range Update, Range Queries                   (Rust)
+- [X] Range Update, Range Queries                   (C, Rust)
 - [x] Alice and Dictionary                          (C, Rust)
 - [x] Magic ChessBoard                              (C, Rust)
 - [x] Love for Mathematics                          (C, Rust)

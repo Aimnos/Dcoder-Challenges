@@ -7,8 +7,8 @@ int main() {
     uint8_t i = 0;
     do
         scanf("%" SCNd8, &list[i]);
-    while(list[i++] != -1);
+    while (list[i++] != -1);
     --i;
-    while(i > 0)
+    while (i > 0)
         printf("%" PRId8 " ", list[--i]);
 }

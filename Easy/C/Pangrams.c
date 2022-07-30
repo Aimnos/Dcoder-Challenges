@@ -8,9 +8,9 @@ int main() {
     scanf(" %s", S);
     bool letters[26] = {false};
     uint8_t count = 0;
-    for(uint8_t i = 0; S[i] != 0; ++i) {
+    for (uint8_t i = 0; S[i] != 0; ++i) {
         const uint8_t j = tolower(S[i]) - 'a';
-        if(!letters[j]) {
+        if (!letters[j]) {
             ++count;
             letters[j] = true;
         }

@@ -6,7 +6,7 @@ int main() {
     scanf("%" SCNu16 " %" SCNu16, &N, &D);
     uint16_t x = D;
     uint16_t y = N;
-    while(y > 0) {
+    while (y > 0) {
         x %= y;
         y ^= x;
         x ^= y;

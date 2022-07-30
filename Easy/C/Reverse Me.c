@@ -6,9 +6,8 @@ int main() {
     char n[6];
     scanf("%s", n);
     uint8_t i = strlen(n);
-    while(n[--i] == '0') {
-    }
-    while(i > 0)
+    while (n[--i] == '0') {}
+    while (i > 0)
         printf("%c", n[i--]);
 
     printf("%c", n[0]);

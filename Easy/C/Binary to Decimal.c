@@ -5,5 +5,5 @@
 int main() {
     char binary[8], *ptr;
     scanf("%s", binary);
-    printf("%" PRIu8, strtoul(binary, &ptr, 2));
+    printf("%" PRIu8, (uint8_t)strtoul(binary, &ptr, 2));
 }

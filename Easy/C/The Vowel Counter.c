@@ -4,8 +4,8 @@
 
 int main() {
     uint16_t vowels = 0;
-    for(char ch = getchar(); !iscntrl(ch); ch = getchar()) {
-        switch(ch) {
+    for (char ch = getchar(); !iscntrl(ch); ch = getchar()) {
+        switch (ch) {
             case 'A':
             case 'E':
             case 'I':

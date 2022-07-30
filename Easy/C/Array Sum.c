@@ -6,11 +6,11 @@ int main() {
     scanf("%" SCNu8, &n);
     uint16_t biggest = 0;
     uint32_t sum = 0;
-    for(uint8_t i = 0; i < n; ++i) {
+    for (uint8_t i = 0; i < n; ++i) {
         uint16_t A;
         scanf("%" SCNu16, &A);
         sum += A;
-        if(A > biggest)
+        if (A > biggest)
             biggest = A;
     }
     printf("%" PRIu16, sum % biggest);

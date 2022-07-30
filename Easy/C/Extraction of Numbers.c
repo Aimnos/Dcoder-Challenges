@@ -5,13 +5,13 @@
 int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
-    for(uint8_t i = 0; i < N; ++i) {
+    for (uint8_t i = 0; i < N; ++i) {
         char ch = getchar();
-        while(!isalnum(ch)) {
+        while (!isalnum(ch)) {
             ch = getchar();
         }
-        while(isalnum(ch)) {
-            if(isdigit(ch))
+        while (isalnum(ch)) {
+            if (isdigit(ch))
                 printf("%c ", ch);
 
             ch = getchar();

@@ -4,7 +4,7 @@
 int main() {
     uint8_t T;
     scanf("%" SCNu8, &T);
-    for(uint8_t i = 0; i < T; ++i) {
+    for (uint8_t i = 0; i < T; ++i) {
         uint16_t n;
         scanf("%" SCNu16, &n);
         const uint16_t A = n / 2;

@@ -5,7 +5,7 @@
 int main() {
     char bit;
     scanf("%c", &bit);
-    while(!isspace(bit)) {
+    while (!isspace(bit)) {
         printf("%" PRIu8, (bit - '0') ^ 1);
         scanf("%c", &bit);
     }

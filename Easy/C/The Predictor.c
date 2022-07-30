@@ -6,11 +6,11 @@
 int main() {
     char prev = getchar();
     uint16_t count = 1;
-    for(char ch = getchar(); isdigit(ch); ch = getchar()) {
-        if(ch != prev) {
+    for (char ch = getchar(); isdigit(ch); ch = getchar()) {
+        if (ch != prev) {
             prev = ch;
             count = 1;
-        } else if(++count >= 6) {
+        } else if (++count >= 6) {
             printf("Bad");
             exit(EXIT_SUCCESS);
         }

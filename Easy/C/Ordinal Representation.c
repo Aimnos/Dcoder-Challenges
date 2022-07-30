@@ -5,7 +5,7 @@ int main() {
     uint8_t N;
     scanf("%" SCNu8, &N);
     printf("%" PRIu8, N);
-    switch(N) {
+    switch (N) {
         case 1:
             printf("st");
             break;

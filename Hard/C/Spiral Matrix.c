@@ -1,50 +1,43 @@
+#include <inttypes.h>
+#include <math.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-	int N, size, *m, primes[81] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419};
-	scanf("%d", &N);
-	for(size = 0; size < 81; size++)
-		if(primes[size] > N)
-			break;
+    uint16_t N;
+    scanf("%" SCNu16, &N);
+    bool* const composites = calloc(N - 1, sizeof(bool));
+    uint16_t* const primes = malloc(N * sizeof(uint16_t));
+    uint8_t len = 0;
+    for (uint16_t i = 0; i < N - 1; ++i)
+        if (!composites[i]) {
+            primes[len++] = i + 2;
+            for (uint16_t j = (i + 2) * (i + 2) - 2; j < N - 1; j += i + 2)
+                composites[j] = true;
+        }
 
-	m = (int*)malloc(size*sizeof(int));
-	for(N = 0; N < 9; N++)
-		if((N + 1)*(N + 1) > size)
-			break;
+    uint16_t* const m = malloc(len * sizeof(uint16_t));
+    uint8_t l = sqrtf(len);
+    len = 0;
+    const uint8_t upper = (l >> 1) + (l % 2);
+    for (uint16_t a = 0; a < upper; ++a) {
+        for (uint8_t i = a; i < l - a; ++i)
+            m[l * a + i] = primes[len++];
 
-	int a = 0, b = N - 1, c = 0, d = N - 1, p = 0;
-	while(b >= a || d >= c) {
-		int i;
-		for(i = a; i <= b; i++)
-			m[N*c + i] = primes[p + i - a];
+        for (uint8_t i = a + 1; i < l - a; ++i)
+            m[l * i + l - a - 1] = primes[len++];
 
-		p += b - a + 1;
-		c++;
-		for(i = c; i <= d; i++)
-			m[N*i + b] = primes[p + i - c];
+        for (uint8_t i = a + 2; i < l - a + 1; ++i)
+            m[l * (l - a - 1) + l - i] = primes[len++];
 
-		p += d - c + 1;
-		b--;
-		for(i = b; i >= a; i--)
-			m[N*d + i] = primes[p + b - i];
+        for (uint8_t i = a + 2; i < l - a; ++i)
+            m[l * (l - i) + a] = primes[len++];
+    }
+    for (uint8_t i = 0; i < len; ++i)
+        printf("%" PRIu16 "%c", m[i], i % l == l - 1 ? '\n' : ' ');
 
-		p += b - a + 1;
-		d--;
-		for(i = d; i >=c; i--)
-			m[N*i + a] = primes[p + d - i];
-
-		p += d - c + 1;
-		a++;
-	}
-	for(int i = 0; i < size; i++) {
-		printf("%d", m[i]);
-		if(i%N == N - 1) {
-			printf("\n");
-		} else {
-			printf(" ");
-		}
-	}
-	free(m);
-	return 0;
+    free(m);
+    free(primes);
+    free(composites);
 }

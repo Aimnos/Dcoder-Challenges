@@ -1,15 +1,12 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-int combination_2(int n) {
-	return n * (n - 1) / 2;
-}
-
 int main() {
-	int T, N, M, i;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d %d", &N, &M);
-		printf("%d\n", combination_2(N)*M);
-	}
-	return 0;
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint8_t N, M;
+        scanf("%" SCNu8 " %" SCNu8, &N, &M);
+        printf("%" PRIu32 "\n", M * ((N * (N - 1)) >> 1));
+    }
 }

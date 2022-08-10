@@ -1,25 +1,30 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-    unsigned int N, Ci, lowest, highest;
-    unsigned long int M, Xi;
-    scanf("%u", &N);
-    scanf("%u %u", &highest, &lowest);
-    M = highest - lowest;
-    for(unsigned int i = 1; i < N; i++) {
-        scanf("%u %lu", &Ci, &Xi);
+    uint32_t N;
+    scanf("%" SCNu32, &N);
+    int32_t M = 0;
+    uint32_t lowestX = UINT32_MAX, highestC = 0;
+
+    // M is the net cost of all the purchases
+    for (uint32_t i = 0; i < N; ++i) {
+        uint32_t Ci, Xi;
+        scanf("%" SCNu32 " %" SCNu32, &Ci, &Xi);
         M += Ci - Xi;
-        if(Xi < lowest)
-            lowest = Xi;
+        if (Xi < lowestX)
+            lowestX = Xi;
 
-        if(Ci > highest)
-            highest = Ci;
+        if (Ci > highestC)
+            highestC = Ci;
     }
-    M += lowest;
-    if(M > highest)
-        printf("%lu", M);
-    else
-        printf("%lu", highest);
 
-    return 0;
+    // leave the item with the least amount of cashback for last => have to account for it
+    M += lowestX;
+
+    // you must have enough money to buy the most expensive item individually but also enough money for the rest
+    if (M > highestC)
+        printf("%" PRIu32, M);
+    else
+        printf("%" PRIu32, highestC);
 }

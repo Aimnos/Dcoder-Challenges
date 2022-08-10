@@ -1,40 +1,41 @@
+#include <float.h>
+#include <inttypes.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int main() {
-	int T, N, *A;
-	double a1, a2, difference, smallest;
-	scanf("%d", &T);
-	for(int i = 0; i < T; i++) {
-		scanf("%d", &N);
-		A = (int *) malloc(N * sizeof(int));
-		for(int j = 0; j < N; j++) {
-			scanf("%d", &A[j]);
-		}
-		if(N < 2)
-			printf("NO\n");
-		else {
-			smallest = -1;
-			for(int j = 1; j < N; j++) {
-				a1 = 0;
-				a2 = 0;
-				for(int k = 0; k < j; k++)
-					a1 += A[k];
+    uint16_t T;
+    scanf("%" SCNu16, &T);
+    for (uint16_t i = 0; i < T; ++i) {
+        uint16_t N;
+        scanf("%" SCNu16, &N);
+        int16_t* const A = malloc(N * sizeof(int16_t));
+        for (uint16_t j = 0; j < N; ++j)
+            scanf("%" SCNd16, &A[j]);
 
-				for(int k = j; k < N; k++)
-					a2 += A[k];
+        if (N < 2) {
+            printf("NO\n");
+            goto cant_divide;
+        }
 
-				a1 /= (double)j;
-				a2 /= (double)N - (double)j;
-				difference = fabs(a1 - a2);
-				if((difference < smallest) || (smallest == -1))
-					smallest = difference;
+        double smallest = DBL_MAX;
+        for (uint16_t j = 1; j < N; ++j) {
+            int32_t a1 = 0;
+            int32_t a2 = 0;
+            for (uint16_t k = 0; k < j; ++k)
+                a1 += A[k];
 
-			}
-			printf("%.2lf\n", smallest);
-		}
-		free(A);
-	}
-	return 0;
+            for (uint16_t k = j; k < N; ++k)
+                a2 += A[k];
+
+            double difference = fabs((double)a1 / j - (double)a2 / (N - j));
+            if (difference < smallest)
+                smallest = difference;
+        }
+        printf("%.2lf\n", smallest);
+
+    cant_divide:
+        free(A);
+    }
 }

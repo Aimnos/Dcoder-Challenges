@@ -1,21 +1,22 @@
+#include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-	int n, element, elements[10], i;
-	for(i = 0; i < 10; i++)
-		elements[i] = 0;
+    uint16_t n;
+    scanf("%" SCNu16, &n);
+    // the smallest element is 1, in TestCase#1, and the biggest element is 5, in TestCase#2
+    uint8_t elements[5] = {0};
+    for (uint16_t i = 0; i < n; ++i) {
+        uint8_t element;
+        scanf("%" SCNu8, &element);
+        elements[element % 5]++;
+    }
+    for (uint8_t i = 0; i < 5; ++i)
+        if (elements[i] > (n >> 1)) {
+            printf("%" PRIu8, i == 0 ? 5 : i);
+            exit(EXIT_SUCCESS);
+        }
 
-	scanf("%d", &n);
-	for(i = 0; i < n; i++) {
-		scanf("%d", &element);
-		elements[element]++;
-	}
-	for(i = 0; i < 10; i++)
-		if(elements[i] > n/2) {
-			printf("%d", i);
-			return 0;
-		}
-
-	printf("-1");
-	return 0;
+    printf("-1");
 }

@@ -1,19 +1,16 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-	int T, x, y, z, i, j, result, prev;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d %d %d", &x, &y, &z);
-		prev = x % z;
-		for(j = 1; j < y; j++) {
-			result = (prev * x) % z;
-			if(result == prev)
-				break;
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t x, y, z;
+        scanf("%" SCNu32 " %" SCNu32 " %" SCNu32, &x, &y, &z);
+        uint32_t result = x % z;
+        while (--y > 0)
+            result = (result * x) % z;
 
-			prev = result;
-		}
-		printf("%d\n", result);
-	}
-	return 0;
+        printf("%" PRIu32 "\n", result);
+    }
 }

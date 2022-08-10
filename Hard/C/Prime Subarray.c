@@ -1,48 +1,50 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <inttypes.h>
 #include <stdbool.h>
+#include <stdio.h>
 
-bool isPrime(int x) {
-	int i;
-	if(x < 2)
-		return false;
+bool is_prime(uint32_t x) {
+    switch (x % 6) {
+        case 1:
+            if (x == 1)
+                return false;
 
-	for(i = 2; i < x; i++)
-		if(x % i == 0)
-			return false;
+        case 5:
+            for (uint32_t i = 5; i * i <= x; i += 6)
+                if (x % i == 0 || x % (i + 2) == 0)
+                    return false;
 
-	return true;
+            return true;
+        default:
+            if (x == 2 || x == 3)
+                return true;
+
+            return false;
+    }
 }
 
 int main() {
-	int T, N, *A, i, j, streak, best;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d", &N);
-		A = (int *)malloc(N * sizeof (int));
-		for(j = 0; j < N; j++)
-			scanf("%d", &A[j]);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t N;
+        scanf("%" SCNu32, &N);
+        uint32_t longest = 0;
+        uint32_t current = 0;
+        for (uint32_t j = 0; j < N; ++j) {
+            uint32_t Ai;
+            scanf("%" SCNu32, &Ai);
+            if (is_prime(Ai))
+                ++current;
+            else {
+                if (current > longest)
+                    longest = current;
 
-		best = 0;
-		streak = 0;
-		for(j = 0; j < N; j++) {
-			if(isPrime(A[j]))
-				streak++;
-			else {
-				if(streak > best)
-					best = streak;
-
-				streak = 0;
-			}
-		}
-		if(best == 0)
-			printf("-1\n");
-		else if(streak > best)
-			printf("%d\n", streak);
-		else
-			printf("%d\n", best);
-
-		free(A);
-	}
-	return 0;
+                current = 0;
+            }
+        }
+        if (longest == 0)
+            printf("-1\n");
+        else
+            printf("%" PRIu32 "\n", current > longest ? current : longest);
+    }
 }

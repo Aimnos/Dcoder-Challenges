@@ -1,19 +1,17 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-  unsigned short int T, N, S, xor;
-  scanf("%hu", &T);
-  for(unsigned short int i = 0; i < T; i++) {
-    scanf("%hu", &N);
-    xor = 0;
-    for(unsigned short int j = 0; j < N; j++) {
-      scanf("%hu", &S);
-      xor = xor^xor;
-      for(unsigned short int k = 0; k < j*(j + 1)/2 + 1; k++)
-        xor = xor^S;
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint8_t N;
+        scanf("%" SCNu8, &N);
+        uint8_t S;
+        scanf("%" SCNu8, &S);
+        for (uint16_t j = 1; j < N; ++j)
+            scanf("%" SCNu8, &S);
 
+        printf("%" PRIu8 "\n", N == 1 ? S : 0);
     }
-    printf("%hu\n", xor);
-  }
-  return 0;
 }

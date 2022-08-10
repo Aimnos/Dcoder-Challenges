@@ -1,38 +1,42 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  unsigned short int N, arrayStart = 0, arrayEnd = 0, start = 0;
-  unsigned int arraySum = 0, sum = 0;
-  short int *A;
-  scanf("%hu", &N);
-  A = (short int*)malloc(N*sizeof(short int));
-  for(unsigned short int i = 0; i < N; i++)
-    scanf("%hi", &A[i]);
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    int16_t* const A = malloc(N * sizeof(int16_t));
+    for (uint8_t i = 0; i < N; ++i)
+        scanf("%" SCNd16, &A[i]);
 
-  for(unsigned short int i = 0; i < N; i++) {
-    if(A[i] < 0) {
-      if(arraySum < sum) {
-        arraySum = sum;
-        arrayStart = start;
-        arrayEnd = i;
-      }
-      sum = 0;
-      while(A[i] < 0)
-        i++;
+    uint8_t max_subarray_start = 0, max_subarrray_end = 0, max_subarray_sum = 0,
+            start = 0, sum = 0;
+    for (uint8_t i = 0; i < N; ++i) {
+        const int16_t elem = A[i];
+        if (elem >= 0)
+            sum += elem;
+        else {
+            if (max_subarray_sum < sum) {
+                max_subarray_sum = sum;
+                max_subarray_start = start;
+                max_subarrray_end = i;
+            }
+            sum = 0;
+            while (++i < N)
+                if (A[i] >= 0)
+                    break;
 
-      start = i;
+            start = i;
+        }
     }
-    sum += A[i];
-  }
-  if(arraySum < sum) {
-    arraySum = sum;
-    arrayStart = start;
-    arrayEnd = N;
-  }
-  for(unsigned short int i = arrayStart; i < arrayEnd; i++)
-    printf("%hu ", A[i]);
+    if (max_subarray_sum < sum
+        || (max_subarray_sum == sum
+            && N - start > max_subarrray_end - max_subarray_start)) {
+        max_subarray_start = start;
+        max_subarrray_end = N;
+    }
+    for (uint8_t i = max_subarray_start; i < max_subarrray_end; ++i)
+        printf("%" PRIu8 " ", A[i]);
 
-  free(A);
-  return 0;
+    free(A);
 }

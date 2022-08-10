@@ -1,29 +1,25 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-	int T, N, *H, K, i, j, k;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d", &N);
-		H = (int *)malloc(N * sizeof (int));
-		for(j = 0; j < N; j++)
-			scanf("%d", &H[j]);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t n;
+        scanf("%" SCNu32, &n);
+        uint32_t* const H = malloc(n * sizeof(uint32_t));
+        for (uint32_t j = 0; j < n; ++j) {
+            scanf("%" SCNu32, &H[j]);
+            uint32_t K = 0, k = j;
+            while (k > 0) {
+                if (H[j] < H[--k])
+                    break;
 
-		for(j = 0; j < N; j++) {
-			K = 0;
-			for(k = j - 1; k >= 0; k--) {
-				if(H[k] > H[j])
-					break;
-
-				K++;
-			}
-			if(j > 0)
-				printf(" ");
-
-			printf("%d", K);
-		}
-		free(H);
-	}
-	return 0;
+                ++K;
+            }
+            printf("%" PRIu32 " ", K);
+        }
+        free(H);
+    }
 }

@@ -1,29 +1,31 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  unsigned short int N, size, *sizes, pairs = 0;
-  char *sides;
-  scanf("%hu", &N);
-  sizes = (unsigned short int*)malloc(N*sizeof(short int));
-  sides = (char*)malloc(N*sizeof(char));
-  for(unsigned short int i = 0; i < N; i++)
-    scanf("%hu %c", &sizes[i], &sides[i]);
+    uint16_t N;
+    scanf("%" SCNu16, &N);
+    int16_t* const shoes = calloc(99, sizeof(int16_t));
+    uint16_t pairs = 0;
+    for (uint16_t i = 0; i < N; ++i) {
+        uint8_t size;
+        char side;
+        scanf("%" SCNu8 " %c", &size, &side);
+        switch (side) {
+            case 'L':
+                if (shoes[size - 1] > 0)
+                    ++pairs;
 
-  while(N > 0) {
-    for(unsigned short int i = 0; i < N - 1; i++)
-      if(sizes[N - 1] == sizes[i] && sides[N - 1] != sides[i]) {
-        pairs++;
-        sizes[i] = sizes[N - 2];
-        sides[i] = sides[N - 2];
-        N--;
-        break;
-      }
+                --shoes[size - 1];
+                break;
+            case 'R':
+                if (shoes[size - 1] < 0)
+                    ++pairs;
 
-    N--;
-  }
-  printf("%hu", pairs);
-  free(sizes);
-  free(sides);
-  return 0;
+                ++shoes[size - 1];
+                break;
+        }
+    }
+    printf("%" PRIu16, pairs);
+    free(shoes);
 }

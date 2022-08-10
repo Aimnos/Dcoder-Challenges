@@ -1,34 +1,38 @@
+#include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-	int T, N, *array, i, j, k, left, right;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d", &N);
-		array = (int *)malloc(N * sizeof (int));
-		for(j = 0; j < N; j++)
-			scanf("%d", &array[j]);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint16_t N;
+        scanf("%" SCNu16, &N);
+        uint16_t* const array = malloc(N * sizeof(uint16_t));
+        for (uint16_t j = 0; j < N; ++j)
+            scanf("%" SCNu16, &array[j]);
 
-		for(j = 1; j < N - 1; j++) {
-			left = 0;
-			right = 0;
-			for(k = 0; k < j; k++)
-				left += array[k];
+        if (N == 1) {
+            printf("Yes\n");
+            goto balanced;
+        }
+        int32_t difference;
+        for (uint16_t j = 1; j < N - 1; ++j) {
+            difference = 0;
+            for (uint16_t k = 0; k < j; ++k)
+                difference += array[k];
 
-			for(k = j + 1; k < N; k++)
-				right += array[k];
+            for (uint16_t k = j + 1; k < N; ++k)
+                difference -= array[k];
 
-			if(left == right)
-				break;
-
-		}
-		if(left == right)
-			printf("Yes\n");
-		else
-			printf("No\n");
-
-		free(array);
-	}
-	return 0;
+            if (difference == 0) {
+                printf("Yes\n");
+                goto balanced;
+            }
+        }
+        printf("No\n");
+    balanced:
+        free(array);
+    }
 }

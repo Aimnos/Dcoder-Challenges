@@ -1,22 +1,22 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  unsigned short int N, L, R;
-  unsigned int Q;
-  char *S, smallest;
-  scanf("%hu %u", &N, &Q);
-  S = (char*)malloc((N + 1)*sizeof(char));
-  scanf("%s", S);
-  for(unsigned int i = 0; i < Q; i++) {
-    scanf("%hu %hu", &L, &R);
-    smallest = S[L - 1];
-    for(unsigned short int j = L; j < R; j++)
-      if(S[j] < smallest)
-        smallest = S[j];
+    uint16_t N;
+    uint32_t Q;
+    scanf("%" SCNu16 " %" SCNu32, &N, &Q);
+    char* const S = malloc((N + 1) * sizeof(char));
+    scanf("%s", S);
+    for (uint32_t i = 0; i < Q; ++i) {
+        uint16_t L, R;
+        scanf("%" SCNu16 " %" SCNu16, &L, &R);
+        uint16_t smallest = S[L - 1];
+        for (uint16_t j = L; j < R; ++j)
+            if (S[j] < smallest)
+                smallest = S[j];
 
-    printf("%c\n", smallest);
-  }
-  free(S);
-  return 0;
+        printf("%c\n", smallest);
+    }
+    free(S);
 }

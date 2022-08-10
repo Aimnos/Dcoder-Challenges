@@ -1,28 +1,24 @@
-#include <stdio.h>
+#include <inttypes.h>
 #include <stdbool.h>
-
-static bool A[2750158];
+#include <stdio.h>
 
 int main() {
-	int n = 2, i = 0, j, index;
-	for(i = 0; i < 1657; i++)
-		if(!A[i])
-			for(j = (i + 2) * (i + 2) - 2; j < 2750158; j += i + 2)
-				A[j] = true;
+    bool composites[2750158] = {false};
+    for (uint16_t i = 0; i < 1657; ++i)
+        if (!composites[i])
+            for (uint32_t j = (i + 2) * (i + 2) - 2; j < 2750158; j += i + 2)
+                composites[j] = true;
 
-
-	scanf("%d", &n);
-	for(i = 0; i < n; i++) {
-		scanf("%d", &index);
-		for(j = 0; j < 2750158; j++) {
-			if(!A[j])
-				index--;
-
-			if(index == 0)
-				break;
-
-		}
-		printf("%d ", j + 2);
-	}
-	return 0;
+    uint8_t n;
+    scanf("%" SCNu8, &n);
+    for (uint8_t i = 0; i < n; ++i) {
+        uint32_t index;
+        scanf("%" SCNu32, &index);
+        for (uint32_t j = 0; j < 2750158; ++j)
+            if (!composites[j])
+                if (--index == 0) {
+                    printf("%" PRIu32 " ", j + 2);
+                    break;
+                }
+    }
 }

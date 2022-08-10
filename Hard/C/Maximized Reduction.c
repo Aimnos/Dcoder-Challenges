@@ -1,33 +1,33 @@
+#include <ctype.h>
+#include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
 
 int main() {
-	int T, num, n[9], i, j, k;
-	scanf("%d", &T);
-	for(i = 0; i < T; i++) {
-		scanf("%d", &num);
-		for(j = 0; j < 9; j++) {
-			n[j] = num % 10;
-			num /= 10;
-		}
-		j = 8;
-		while(n[j] == 0)
-			j--;
+    uint16_t T;
+    scanf("%" SCNu16, &T);
+    getchar();
 
-		k = j;
-		while(j > 0) {
-			if(n[j - 1] > n[j])
-				break;
+    // delete the most significant digit that is smaller than its less significant neighbor
+    // if there is no such digit, delete the least significant one
+    for (uint8_t i = 0; i < T; ++i) {
+        bool deleted = false;
+        char prev = getchar();
+        for (char ch = getchar(); isdigit(ch); ch = getchar()) {
+            if (deleted)
+                printf("%c", prev);
+            else {
+                if (ch > prev)
+                    deleted = true;
+                else
+                    printf("%c", prev);
+            }
 
-			j--;
-		}
-		n[j] = -1;
-		while(k >= 0) {
-			if(n[k] != -1)
-				printf("%d", n[k]);
+            prev = ch;
+        }
+        if (deleted)
+            printf("%c", prev);
 
-			k--;
-		}
-		printf("\n");
-	}
-	return 0;
+        printf("\n");
+    }
 }

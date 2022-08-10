@@ -1,39 +1,35 @@
+#include <ctype.h>
+#include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int cmp(const void* a, const void* b) {
+    const char arg1 = *(const char*)a;
+    const char arg2 = *(const char*)b;
+
+    if (tolower(arg1) < tolower(arg2))
+        return -1;
+
+    if (tolower(arg1) > tolower(arg2))
+        return 1;
+
+    if (arg1 < arg2)
+        return -1;
+
+    if (arg1 > arg2)
+        return 1;
+
+    return 0;
+}
 
 int main() {
-	int n, i, j, k, smallest_pos, pos, aux;
-	char string[1001];
-	scanf("%d", &n);
-	for(i = 0; i < n; i++) {
-		scanf("%s", &string);
-		for(j = 0; j < 1000; j++) {
-			if(string[j] == 0)
-				break;
-
-			smallest_pos = j;
-			for(k = j + 1; k < 1001; k++) {
-				if(string[k] == 0)
-					break;
-
-				if(string[k] < 'a') {
-					if((string[smallest_pos] < 'a') && string[k] < string[smallest_pos])
-						smallest_pos = k;
-					else if(string[k] <= string[smallest_pos] - 32)
-						smallest_pos = k;
-
-				} else {
-					if((string[smallest_pos] < 'a') && string[k] - 32 < string[smallest_pos])
-						smallest_pos = k;
-					else if(string[k] - 32 < string[smallest_pos] - 32)
-						smallest_pos = k;
-
-				}
-			}
-			aux = string[smallest_pos];
-			string[smallest_pos] = string[j];
-			string[j] = aux;
-		}
-		printf("%s\n", string);
-	}
-	return 0;
+    uint8_t n;
+    scanf("%" SCNu8, &n);
+    for (uint8_t i = 0; i < n; ++i) {
+        char string[1001];
+        scanf("%s", string);
+        qsort(string, strlen(string), sizeof(char), cmp);
+        printf("%s\n", string);
+    }
 }

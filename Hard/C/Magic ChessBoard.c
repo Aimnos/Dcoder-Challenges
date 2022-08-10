@@ -1,11 +1,14 @@
+#include <inttypes.h>
 #include <stdio.h>
 
 int main() {
-	unsigned char T, N;
-	scanf("%hhu", &T);
-	for(unsigned char i = 0; i < T; i++) {
-		scanf("%hhu", &N);
-		printf("%u\n", N * (N + 1) * (2 * N + 1) / 6);
-	}
-	return 0;
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint8_t N;
+        scanf("%" SCNu8, &N);
+
+        // solution is sum((N - i) * (N - i)) for 0 <= i < N, also known as the square pyramidal number for N
+        printf("%" PRIu32 "\n", N * (N + 1) * (2 * N + 1) / 6);
+    }
 }

@@ -1,30 +1,21 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int N, *a, i, j, highestPos, aux;
-  scanf("%i", &N);
-  a = (int*)malloc(N*sizeof(int));
-  for(i = 0; i < N; i++)
-    scanf("%i", &a[i]);
-
-  for(i = 0; i < N - 1; i++) {
-    highestPos = 0;
-    for(j = 1; j < N - i; j++)
-      if(a[j] > a[highestPos])
-        highestPos = j;
-
-    aux = a[highestPos];
-    a[highestPos] = a[N - i - 1];
-    a[N - i - 1] = aux;
-  }
-  if(N%2 == 1)
-    printf("%i", a[N/2]);
-  else
-    printf("%i", a[N/2 - 1]);
-
-  free(a);
-  return 0;
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    uint16_t* a = malloc(N * sizeof(uint16_t));
+    for (uint8_t i = 0; i < N; ++i) {
+        uint16_t elem;
+        scanf("%" SCNu16, &elem);
+        uint8_t j = i;
+        while (j > 0 && a[j - 1] > elem) {
+            a[j] = a[j - 1];
+            --j;
+        }
+        a[j] = elem;
+    }
+    printf("%" PRIu16, N % 2 == 1 ? a[N >> 1] : a[(N >> 1) - 1]);
+    free(a);
 }

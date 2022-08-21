@@ -1,31 +1,31 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int T, i;
-  long int N, *friends, K, j, k, minPos, gifts;
-  scanf("%d", &T);
-  for(i = 0; i < T; i++) {
-    scanf("%ld", &N);
-    friends = (int*)malloc(N*sizeof(int));
-    for(j = 0; j < N; j++)
-      scanf("%ld", &friends[j]);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t N;
+        scanf("%" SCNu32, &N);
+        uint32_t* factors = malloc(N * sizeof(uint32_t));
+        for (uint32_t j = 0; j < N; ++j) {
+            uint32_t factor;
+            scanf("%" SCNu32, &factor);
+            uint32_t k = j;
+            while (k > 0 && factors[k - 1] > factor) {
+                factors[k] = factors[k - 1];
+                --k;
+            }
+            factors[k] = factor;
+        }
+        uint32_t K;
+        scanf("%" SCNu32, &K);
+        uint64_t gifts = factors[0];
+        for (uint32_t j = 1; j < K; ++j)
+            gifts += factors[j];
 
-    scanf("%ld", &K);
-    gifts = 0;
-    for(j = 0; j < K; j++) {
-      minPos = 0;
-      for(k = 1; k < N - j; k++)
-        if(friends[k] < friends[minPos])
-          minPos = k;
-
-      gifts += friends[minPos];
-      friends[minPos] = friends[N - j - 1];
+        printf("%" PRIu64 "\n", gifts);
+        free(factors);
     }
-    printf("%ld\n", gifts);
-    free(friends);
-  }
-  return 0;
 }

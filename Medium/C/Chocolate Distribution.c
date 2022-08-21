@@ -1,25 +1,22 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int T, N, i, j;
-  long int M;
-  scanf("%d", &T);
-  for(i = 0; i < T; i++) {
-    scanf("%d %ld", &N, &M);
-    if(M%(N + 1) > 0)
-      printf("%d", M/(N + 1) + 1);
-    else
-      printf("%d", M/(N + 1));
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint16_t N;
+        uint32_t M;
+        scanf("%" SCNu16 " %" SCNu32, &N, &M);
+        const uint16_t mid = M % (N + 1);
+        uint32_t amount = 1 + M / (N + 1);
+        for (uint32_t j = 0; j < mid; ++j)
+            printf("%" PRIu32 " ", amount);
 
-    for(j = 1; j < M%(N + 1); j++)
-      printf(" %d", M/(N + 1) + 1);
+        --amount;
+        for (uint32_t j = mid; j < N; ++j)
+            printf("%" PRIu32 " ", amount);
 
-    for(j = M%(N + 1); j < N + 1; j++)
-      printf(" %d", M/(N + 1));
-
-    printf("\n");
- }
-  return 0;
+        printf("%" PRIu32 "\n", amount);
+    }
 }

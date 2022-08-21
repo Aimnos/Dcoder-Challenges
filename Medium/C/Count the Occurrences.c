@@ -1,29 +1,25 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int N, *A, Q, x, y, i, j;
-  scanf("%d", &N);
-  A = (int*)malloc(N*sizeof(int));
-  for(i = 0; i < N; i++)
-    scanf("%d", &A[i]);
+    uint16_t N;
+    scanf("%" SCNu16, &N);
+    uint16_t* A = malloc(N * sizeof(uint16_t));
+    for (uint16_t i = 0; i < N; ++i)
+        scanf("%" SCNu16, &A[i]);
 
-  scanf("%d", &Q);
-  for(i = 0; i < Q; i++) {
-    y = 0;
-    scanf("%d", &x);
-    for(j = 0; j < N; j++)
-      if(A[j] == x)
-        y++;
+    uint16_t Q;
+    scanf("%" SCNu16, &Q);
+    for (uint16_t i = 0; i < Q; ++i) {
+        uint16_t x;
+        scanf("%" SCNu16, &x);
+        uint16_t occurences = 0;
+        for (uint16_t j = 0; j < N; ++j)
+            if (A[j] == x)
+                ++occurences;
 
-    if(y == 0)
-      printf("-1\n");
-    else
-      printf("%d\n", y);
-
-  }
-  free(A);
-  return 0;
+        printf("%" PRId16 "\n", occurences == 0 ? -1 : occurences);
+    }
+    free(A);
 }

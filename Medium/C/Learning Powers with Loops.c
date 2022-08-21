@@ -1,24 +1,20 @@
-#include  <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <inttypes.h>
+#include <stdio.h>
 
 int main() {
-  int M, n;
-  long int x, y = 1;
-  scanf("%i %i", &M, &n);
-  if(n == 0)
-    printf("1");
-  else {
-    x = M;
-    while(n > 1) {
-      if(n%2 == 1) {
-        n -= 1;
-        y *= x;
-      }
-      n /= 2;
-      x *= x;
+    uint8_t M, n;
+    scanf("%" SCNu8 " %" SCNu8, &M, &n);
+    if (n == 0)
+        printf("1");
+    else {
+        uint64_t x = M, y = 1;
+        while (n > 1) {
+            if (n % 2 == 1)
+                y *= x;
+
+            n >>= 1;
+            x *= x;
+        }
+        printf("%" PRIu64, x * y);
     }
-    printf("%li", x*y);
-  }
-  return 0;
 }

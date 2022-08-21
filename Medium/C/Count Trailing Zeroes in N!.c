@@ -1,17 +1,13 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  unsigned long int n, i, x, zeros = 0;
-  scanf("%lu", &n);
-  for(i = n; i > 4; i--) {
-    x = i;
-    while(x%5 == 0 && x > 0) {
-      x /= 5;
-      zeros++;
+    uint32_t n;
+    scanf("%" SCNu32, &n);
+    uint16_t zeroes = 0;
+    while (n >= 5) {
+        n /= 5;
+        zeroes += n;
     }
-  }
-  printf("%lu", zeros);
-  return 0;
+    printf("%" PRIu16, zeroes);
 }

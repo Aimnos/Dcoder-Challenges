@@ -1,30 +1,29 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
+int cmp(const void* a, const void* b) {
+    const int32_t arg1 = *(const int32_t*)a;
+    const int32_t arg2 = *(const int32_t*)b;
+
+    if (arg1 < arg2)
+        return -1;
+
+    if (arg1 > arg2)
+        return 1;
+
+    return 0;
+}
 
 int main() {
-  int n, k, i, j, highestPos;
-  long int *a;
-  scanf("%d %d", &n, &k);
-  a = (long int*)malloc(n*sizeof(long int));
-  for(i = 0; i < n; i++)
-    scanf("%ld", &a[i]);
+    uint8_t n, k;
+    scanf("%" SCNu8 " %" SCNu8, &n, &k);
+    // Even though the problem states that all elements are positive, using uint32_t fails for TestCase#0
+    int32_t* a = malloc(n * sizeof(int32_t));
+    for (uint8_t i = 0; i < n; ++i)
+        scanf("%" SCNd32, &a[i]);
 
-  for(i = 1; i < k; i++) {
-    highestPos = 0;
-    for(j = 1; j <= n - i; j++)
-      if(a[j] > a[highestPos])
-        highestPos = j;
-
-    a[highestPos] = a[n - i];
-  }
-  highestPos = 0;
-  for(i = 1; i <= n - k; i++)
-    if(a[i] > a[highestPos])
-      highestPos = i;
-
-  printf("%ld", a[highestPos]);
-  free(a);
-  return 0;
+    qsort(a, n, sizeof(int32_t), cmp);
+    printf("%" PRId32, a[n - k]);
+    free(a);
 }

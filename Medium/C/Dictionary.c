@@ -1,43 +1,30 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-//Compiler version gcc  6.3.0
-
 typedef struct pair {
-  char key[20];
-  int value;
+    char key[21];
+    uint8_t value;
 } pair;
 
 int main() {
-  char key[20];
-  int N, i, j, value, Q;
-  pair *p, *dictionary[20];
-  scanf("%d", &N);
-  for(i = 0; i < N; i++) {
-    for(j = 0; j < 20; j++)
-      key[j] = 0;
+    uint8_t N;
+    scanf("%" SCNu8, &N);
+    pair* dictionary = malloc(N * sizeof(pair));
+    for (uint8_t i = 0; i < N; ++i)
+        scanf("%s %" SCNu8, dictionary[i].key, &dictionary[i].value);
 
-    scanf("%s %d", key, &value);
-    p = (pair*)malloc(sizeof(pair));
-    for(j = 0; j < 20; j++)
-      p->key[j] = key[j];
-
-    p->value = value;
-    dictionary[i] = p;
-  }
-  scanf("%d", &Q);
-  for(i = 0; i < Q; i++) {
-    scanf("%s", key);
-    for(j = 0; j < N; j++)
-      if(strcmp(dictionary[j]->key, key) == 0) {
-        printf("%d\n", dictionary[j]->value);
-        break;
-      }
-
-  }
-  for(i = 0; i < N; i++)
-    free(dictionary[i]);
-
-  return 0;
+    uint8_t Q;
+    scanf("%" SCNu8, &Q);
+    for (uint8_t i = 0; i < Q; ++i) {
+        char key[21];
+        scanf("%s", key);
+        for (uint8_t j = 0; j < N; ++j)
+            if (strcmp(dictionary[j].key, key) == 0) {
+                printf("%" PRIu8 "\n", dictionary[j].value);
+                break;
+            }
+    }
+    free(dictionary);
 }

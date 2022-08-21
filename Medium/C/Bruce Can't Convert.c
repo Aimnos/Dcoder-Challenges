@@ -1,25 +1,24 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  unsigned long int N;
-  int T, i, B, j = 0, x[17];
-  scanf("%d", &T);
-  for(i = 0; i < T; i++) {
-    scanf("%lu %d", &N, &B);
-    while(N > 0) {
-      x[j++] = N%B;
-      N /= B;
-    }
-    while(j > 0) {
-      if(x[--j] > 9)
-        printf("%c", x[j] - 10 + 'A');
-      else
-        printf("%d", x[j]);
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t N;
+        uint8_t B;
+        scanf("%" SCNu32 " %" SCNu8, &N, &B);
+        uint32_t x = B;
+        while (x <= N)
+            x *= B;
 
+        x /= B;
+        while (x > 1) {
+            const uint8_t digit = N / x;
+            printf("%c", digit > 9 ? digit - 10 + 'A' : digit + '0');
+            N -= x * digit;
+            x /= B;
+        }
+        printf("%c\n", N > 9 ? N - 10 + 'A' : N + '0');
     }
-    printf("\n");
-  }
-  return 0;
 }

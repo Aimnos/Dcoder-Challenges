@@ -1,30 +1,27 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
-int gcd(int a, int b) {
-  int aux;
-  if(b > a) {
-      aux = a;
-      a = b;
-      b = aux;
-  }
-  while(b != 0) {
-      aux = a%b;
-      a = b;
-      b = aux;
-  }
-  return a;
+uint8_t gcd(uint8_t a, uint8_t b) {
+    if (b > a) {
+        a ^= b;
+        b ^= a;
+        a ^= b;
+    }
+    while (b != 0) {
+        a = (a % b) ^ b;
+        b ^= a;
+        a ^= b;
+    }
+    return a;
 }
 
 int main() {
-  int a, b, i, x = 1;
-  scanf("%d %d", &a, &b);
-  for(i = b; i >= a; i--) {
-    if(x%i != 0)
-      x *= i/gcd(x, i);
+    uint8_t a, b;
+    scanf("%" SCNu8 " %" SCNu8, &a, &b);
+    uint32_t lcm = 1;
+    for (uint8_t i = b; i >= a; --i)
+        if (lcm % i != 0)
+            lcm *= i / gcd(lcm, i);
 
-  }
-  printf("%d", x);
-  return 0;
+    printf("%" PRIu32, lcm);
 }

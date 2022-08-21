@@ -1,34 +1,32 @@
+#include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-//Compiler version gcc  6.3.0
+int cmp(const void* a, const void* b) {
+    const char arg1 = *(const char*)a;
+    const char arg2 = *(const char*)b;
+
+    if (arg1 < arg2)
+        return -1;
+
+    if (arg1 > arg2)
+        return 1;
+
+    return 0;
+}
 
 int main() {
-  char a[33], b[33];    //TestCase#0 has a string with 32 characters
-  int sizeA, sizeB, i, j, match;
-  scanf("%s\n%s", a, b);
-  for(sizeA = 0; sizeA < 33; sizeA++)
-    if(a[sizeA] == 0)
-      break;
-
-  for(sizeB = 0; sizeB < 33; sizeB++)
-    if(b[sizeB] == 0)
-      break;
-
-  for(i = 0; i < sizeA; i++) {
-    match = 0;
-    for(j = 0; j < sizeB; j++)
-      if(a[i] == b[j]) {
-        a[i] = a[--sizeA];
-        b[j] = b[--sizeB];
-        match = 1;
-        break;
-      }
-
-    if(match == 0) {
-      printf("No");
-      return 0;
+    // The longest first string has length 98 (TestCase#0)
+    // The longest second string has length 14 (Sample Input)
+    char a[99], b[15];
+    scanf("%s\n%s", a, b);
+    const uint8_t len = strlen(a);
+    if (len != strlen(b))
+        printf("No");
+    else {
+        qsort(a, len, sizeof(char), cmp);
+        qsort(b, len, sizeof(char), cmp);
+        printf("%s", strcmp(a, b) == 0 ? "Yes" : "No");
     }
-  }
-  printf("Yes");
-  return 0;
 }

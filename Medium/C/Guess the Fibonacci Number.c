@@ -1,20 +1,18 @@
+#include <inttypes.h>
 #include <stdio.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  unsigned int x1, x2, x, aux, n, i;
-  scanf("%u", &n);
-  for(i = 0; i < n; i++) {
-    x1 = 0;
-    x2 = 1;
-    scanf("%u", &x);
-    while(x2 <= x) {
-      aux = x1 + x2;
-      x1 = x2;
-      x2 = aux;
+    uint8_t n;
+    scanf("%" SCNu8, &n);
+    for (uint8_t i = 0; i < n; ++i) {
+        uint64_t x;
+        scanf("%" SCNu64, &x);
+        uint64_t x1 = 1, x2 = 1;
+        while (x2 <= x) {
+            x1 = (x1 + x2) ^ x2;
+            x2 ^= x1;
+            x1 ^= x2;
+        }
+        printf("%" PRIu64 "\n", x2);
     }
-    printf("%u\n", x2);
-  }
-  return 0;
 }

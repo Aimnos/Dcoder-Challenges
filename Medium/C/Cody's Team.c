@@ -1,25 +1,25 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc 6.3.0
-
 int main() {
-  int N, k, *x, i, sum, high = -1, j;
-  scanf("%d %d", &N, &k);
-  x = (int*)calloc(N, sizeof(int));
-  for(i - 0; i < N; i++)
-    scanf("%d", &x[i]);
-
-  for(int i = 0; i <= N - k; i++) {
-    sum = 0;
-    for(j = i; j < i + k; j++)
-      sum += x[j];
-
-    if(sum > high)
-      high = sum;
-
-  }
-  printf("%d", high);
-  free(x);
-  return 0;
+    uint16_t N, k;
+    scanf("%" SCNu16 " %" SCNu16, &N, &k);
+    int16_t* marks = malloc(k * sizeof(int16_t));
+    int32_t sum = 0;
+    for (uint16_t i = 0; i < k; ++i) {
+        scanf("%" SCNd16, &marks[i]);
+        sum += marks[i];
+    }
+    int32_t highest = sum;
+    for (uint16_t i = k; i < N; ++i) {
+        const uint16_t index = i % k;
+        sum -= marks[index];
+        scanf("%" SCNd16, &marks[index]);
+        sum += marks[index];
+        if (sum > highest)
+            highest = sum;
+    }
+    printf("%" PRId32, highest);
+    free(marks);
 }

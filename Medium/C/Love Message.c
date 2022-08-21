@@ -1,24 +1,18 @@
+#include <inttypes.h>
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <string.h>
 
 int main() {
-  int T, i, j, x;
-  char S[1000];
-  scanf("%d", &T);
-  for(i = 0; i < T; i++) {
-    x = 0;
-    for(j = 0; j < 1000; j++)
-      S[j] = 0;
+    uint16_t T;
+    scanf("%" SCNu16, &T);
+    for (uint16_t i = 0; i < T; ++i) {
+        char S[1001];
+        scanf("%s", S);
+        const uint16_t len = strlen(S);
+        uint16_t overhead = 0;
+        for (uint16_t j = 0; j < len; ++j)
+            overhead += S[j] - 'a' + 1;
 
-    scanf("%s", S);
-    for(j = 0; j < 1000; j++) {
-      if(S[j] == 0)
-        break;
-
-      x += S[j] - 'a' + 1;
+        printf("%" PRIu16 "\n", overhead);
     }
-    printf("%d\n", x);
-  }
-  return 0;
 }

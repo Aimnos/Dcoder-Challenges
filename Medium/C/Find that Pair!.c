@@ -1,31 +1,22 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-//Compiler version gcc  6.3.0
-
 int main() {
-  int n, k, *a, canSum = 0, i, j;
-  scanf("%d %d", &n, &k);
-  a = (int*)malloc(n*sizeof(int));
-  for(i = 0; i < n; i++)
-    scanf("%d", &a[i]);
-
-  for(i = 0; i < n; i++) {
-    for(j = i; j < n; j++)
-      if(a[i] + a[j] == k) {
-        canSum = 1;
-        break;
-      }
-
-    if(canSum == 1)
-      break;
-
-  }
-  if(canSum == 1)
-    printf("Yes");
-  else
+    uint8_t n;
+    int16_t k;
+    scanf("%" SCNu8 " %" SCNd16, &n, &k);
+    int8_t* a = malloc(n * sizeof(int8_t));
+    for (uint8_t i = 0; i < n; ++i) {
+        scanf("%" SCNd8, &a[i]);
+        const int8_t elem = a[i];
+        for (uint8_t j = 0; j < i; ++j)
+            if (elem + a[j] == k) {
+                printf("Yes");
+                goto found;
+            }
+    }
     printf("No");
-
-  free(a);
-  return 0;
+found:
+    free(a);
 }

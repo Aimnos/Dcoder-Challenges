@@ -1,28 +1,26 @@
+#include <inttypes.h>
+#include <stdbool.h>
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <stdlib.h>
 
 int main() {
-  int n, S, prev = -101, increasing = 0, can = 1, i;
-  scanf("%i", &n);
-  for(i = 0; i < n; i++) {
-    scanf("%i", &S);
-    if(increasing == 0) {
-      if(S >= prev && i > 0)
-          increasing = 1;
+    uint8_t n;
+    scanf("%" SCNu8, &n);
+    int8_t prev;
+    scanf("%" SCNd8, &prev);
+    bool decreasing = true;
+    for (uint8_t i = 1; i < n; ++i) {
+        int8_t si;
+        scanf("%" SCNd8, &si);
+        if (decreasing) {
+            if (si >= prev)
+                decreasing = false;
 
-    } else {
-      if(S <= prev) {
-        can = 0;
-        break;
-      }
+        } else if (si <= prev) {
+            printf("No");
+            exit(EXIT_SUCCESS);
+        }
+        prev = si;
     }
-    prev = S;
-  }
-  if(can == 0)
-    printf("No");
-  else
     printf("Yes");
-
-  return 0;
 }

@@ -1,21 +1,24 @@
+#include <inttypes.h>
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <string.h>
 
 int main() {
-  char s[6];    //TestCase#2 has a string with 5 characters
-  int i;
-  scanf("%s", s);
-  if(s[0] == 'a' || s[0] == 'e' || s[0] == 'i' || s[0] == 'o' || s[0] == 'u')
-    printf("%sway", s);
-  else {
-    for(i = 1; i < 6; i++) {
-      if(s[i] == 0)
-        break;
+    // TestCase#2 has the longest string, with length 6
+    char word[7];
+    scanf("%s", word);
+    const uint8_t len = strlen(word);
+    switch (word[0]) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            printf("%sway", word);
+            break;
+        default:
+            for (uint8_t i = 1; i < len; ++i)
+                printf("%c", word[i]);
 
-      printf("%c", s[i]);
+            printf("%cay", word[0]);
     }
-    printf("%cay", s[0]);
-  }
-  return 0;
 }

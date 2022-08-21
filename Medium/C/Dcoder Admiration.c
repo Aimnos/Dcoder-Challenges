@@ -1,15 +1,14 @@
-#include <stdio.h>
+#include <inttypes.h>
 #include <math.h>
-
-//Compiler version gcc  6.3.0
+#include <stdio.h>
 
 int main() {
-  unsigned long int T, N, i;
-  scanf("%lu", &T);
-  for(i = 0; i < T; i++) {
-    scanf("%lu", &N);
-    N -= floor(sqrt(N));
-    printf("%lu\n", N);
-  }
-  return 0;
+    uint8_t T;
+    scanf("%" SCNu8, &T);
+    for (uint8_t i = 0; i < T; ++i) {
+        uint32_t N;
+        scanf("%" SCNu32, &N);
+        // the only members with an even number of admirers are the ones whose number is a perfect square
+        printf("%" PRIu32 "\n", N - (uint32_t)floorf(sqrtf(N)));
+    }
 }

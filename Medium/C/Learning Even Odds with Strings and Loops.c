@@ -1,25 +1,21 @@
+#include <inttypes.h>
 #include <stdio.h>
-
-//Compiler version gcc  6.3.0
+#include <string.h>
 
 int main() {
-  int t, size, i, j;
-  char str[21];
-  scanf("%i", &t);
-  for(i = 0; i < t; i++) {
-    scanf("%s", str);
-    for(size = 0; size < 21; size++)
-      if(str[size] == 0)
-        break;
+    uint8_t t;
+    scanf("%" SCNu8, &t);
+    for (uint8_t i = 0; i < t; ++i) {
+        char str[21];
+        scanf("%s", str);
+        const uint8_t len = strlen(str);
+        for (uint8_t j = 0; j < len; j += 2)
+            printf("%c", str[j]);
 
-    for(j = 0; j < size; j += 2)
-      printf("%c", str[j]);
+        printf(" ");
+        for (uint8_t j = 1; j < len; j += 2)
+            printf("%c", str[j]);
 
-    printf(" ");
-    for(j = 1; j < size; j += 2)
-      printf("%c", str[j]);
-
-    printf("\n");
-  }
-  return 0;
+        printf("\n");
+    }
 }
